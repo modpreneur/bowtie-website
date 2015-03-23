@@ -1,0 +1,138 @@
+{**
+ * @param string   $basePath web base path
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>{ifset title}{include title|striptags} | {/ifset}Bowtie</title>
+
+        <link rel="stylesheet" href="{$basePath}/css/bowtie.css">
+        <link rel="stylesheet" href="{$basePath}/css/bowtie-icons.css">
+        <link rel="stylesheet" href="{$basePath}/css/custom-style.css">
+        <link rel="shortcut icon" href="{$basePath}/favicon.ico">
+
+        <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+        <div class="section-01 clearfix">
+            <div class="menu only-main-menu static">
+                <div class="container">
+                    <nav class="row">
+                        <div class="head">
+                            <a n:href="Homepage:"><span class="bowtie bowtie-logobowtie color-tertiary font-60 line-height-15"></span></a>
+                        </div>
+                        <div class="head-content">
+                            <div class="sub-main-menu">
+                                <label for="show-main-menu" class="show-main-menu">
+                                    <span class="tiecons tiecons-menu-normal"></span>
+                                </label>
+                                <input type="checkbox" id="show-main-menu">
+                                <ul class="main-menu">
+                                    <li><a n:href="Homepage:" {ifCurrent Homepage:} class="active" {/ifCurrent}>Home</a></li>
+                                    <li><a n:href="GettingStarted:" {ifCurrent GettingStarted:} class="active" {/ifCurrent}>Getting started</a></li>
+                                    <li><a n:href="Features:" {ifCurrent Features:} class="active" {/ifCurrent}>Features</a></li>
+                                    <li><a n:href="Documentation:" {ifCurrent Documentation:} class="active" {/ifCurrent}>Documentation</a></li>
+                                    {*<li><a n:href="GenerateCss:" {ifCurrent GenerateCss:} class="active" {/ifCurrent}>Generate CSS</a></li>*}
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        {block head}{/block}
+    </head>
+
+    <body>
+        {*<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>*}
+
+        {include content}
+
+        {block scripts}
+        {*<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>*}
+        <script src="//nette.github.io/resources/js/netteForms.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="js/ZeroClipboard.js"></script>
+
+        <script src="{$basePath}/js/main.js"></script>
+        <script type="text/javascript">
+            var allRadios = document.getElementsByName('list');
+            var booRadio;
+            var x = 0;
+            for(x = 0; x < allRadios.length; x++){
+
+                allRadios[x].onclick = function() {
+                    if(booRadio == this){
+                        this.checked = false;
+                        booRadio = null;
+                    }else{
+                        booRadio = this;
+                    }
+                };
+            }
+         </script>
+        {/block}
+
+
+        <footer id="footer">
+            <div class="clear">
+                <div class="section-06">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span-medium-8 text-right clearfix">
+                                <span class="bowtie bowtie-logobowtie font-60 color-tertiary"><span class="absolute">CSS Framework</span></span>
+                            </div>
+                            <div class="span-medium-10 offset-medium-6 clearfix social-box">
+                                <a class="social-popout" target="_blank" href="#">
+                                    <span class="tiecons tiecons-facebook-circle-negative"></span>
+                                </a>
+                                <a class="social-popout" target="_blank" href="#">
+                                    <span class="tiecons tiecons-twitter-circle-negative"></span>
+                                </a>
+                                <a class="social-popout" target="_blank" href="#">
+                                    <span class="tiecons tiecons-linkedin-circle-negative"></span>
+                                </a>
+                                <a class="social-popout" target="_blank" href="#">
+                                    <span class="tiecons tiecons-google-plus-circle-negative"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-07">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span-medium-12">
+                                <!--<div class="navbar">-->
+                                <!--<ul>-->
+                                <!--<li><a href="#">Privacy</a></li>-->
+                                <!--<li><a href="#">Terms</a></li>-->
+                                <!--<li><a href="#">Contact</a></li>-->
+                                <!--</ul>-->
+                                <!--</div>-->
+                                <div class="navbar">
+                                    <ul>
+                                        <li><a href="http://www.modernipodnikatel.cz" target="_blank">Modernipodnikatel.cz</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--|-->
+                            <div class="span-medium-12 text-right">
+                                <div class="navbar">
+                                    <ul>
+                                        <li>2015 &copy; BowtieCSS.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
