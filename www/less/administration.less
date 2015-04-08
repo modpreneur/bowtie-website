@@ -1,0 +1,152 @@
+.animatee (@animated: height 300ms ease) {
+  -webkit-transition: @animated;
+  -moz-transition: @animated;
+  -ms-transition: @animated;
+  -o-transition: @animated;
+  transition: @animated;
+}
+.animated(@anime: all 500ms ease) {
+  -webkit-transition: @anime;
+  -moz-transition: @anime;
+  -ms-transition: @anime;
+  -o-transition: @anime;
+  transition: @anime;
+}
+.administration {
+  h1{
+    font-size: 32px;
+    &.main {
+      font-size: 38px;
+      margin: 10px 0px;
+    }
+  }
+  .menu {
+    background: @color-primary;
+    position: fixed;
+    z-index: 10;
+    height: 63px;
+    width: 100%;
+    border-bottom: solid 1px @text-muted;
+    h1 {
+      color: @color-white;
+    }
+    nav {
+      position: relative;
+
+      .menu-item {
+        float: right;
+        padding: 20px 10px 20px 0px;
+      }
+    }
+    .dropdown-user {
+      left: -70px;
+      top: 40px;
+    }
+  }
+  .side-bar {
+    background: @color-secondary;
+    z-index: 10;
+    width: 200px;
+    top: 63px;
+    ul a li {
+      padding-left: 10px;
+    }
+    li {
+      font-size: 18px;
+      border-bottom: 1px solid @color-grey-dark;
+      border-left: solid 4px transparent;
+      padding: 10px 10px 10px 0px;
+      color: @color-white;
+      &:hover {
+        background-color: @color-grey-dark-hover;
+        color: @color-white;
+        border-left: solid 4px @color-primary;
+      }
+      li {
+        padding: 0px;
+      }
+    }
+  }
+  .container-fluid-with-sidebar {
+    padding-left: 200px;
+    padding-top: 63px;
+  }
+  .next-row {
+    display: block;
+    text-align: center;
+  }
+  .bigger-icons {
+    a.button {
+      font-size: 22px;
+    }
+    i.fa {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+  }
+}
+.disable {
+  pointer-events: none;
+  cursor: default;
+}
+//DROP-DOWN on SIDEBAR
+.dropdown-main-sidebar {
+  input[type=checkbox]{
+    display: none;
+  }
+  input[type=checkbox]:checked ~ #dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    .animatee();
+    .animated();
+
+    li {
+      height: 100%;
+      :last-of-type {
+        border: none !important;
+      }
+    }
+  }
+  ul {
+//    background-color: black;
+    margin: 0px 0 0 -4px;
+    padding:0;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    width: 200px;
+    text-align: center;
+    height: 0px;
+    .animatee();
+    .animated();
+  }
+  li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 0px;
+    a {
+      text-align: left;
+      line-height: 50px;
+      color: @color-white;
+      text-decoration: none;
+      padding: 10px 50px;
+      padding-left: 20px !important;
+    }
+  }
+  .drop {
+    .clearfix();
+  }
+  .show-drop {
+    cursor: pointer;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+}
