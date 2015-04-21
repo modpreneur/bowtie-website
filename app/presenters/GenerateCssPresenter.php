@@ -8,6 +8,9 @@ use Nette,
 
 class GenerateCssPresenter extends BasePresenter
 {
+    const TEMP = 'temp/bowtie/css/bowtie.css';
+
+
     public function renderDefault($download = false)
     {
         if ($download){
@@ -58,36 +61,36 @@ class GenerateCssPresenter extends BasePresenter
             $tmp = "";
 
             $string = array(
-                " @import \"less/alerts\";",
+                " @import \"bowtie/less/alerts\";",
                 "",
-                " @import \"less/awesome-menu\";",
-                " @import \"less/bna-widget\";",
-                " @import \"less/borders\";",
-                " @import \"less/buttons\";",
+                " @import \"bowtie/less/awesome-menu\";",
+                " @import \"bowtie/less/bna-widget\";",
+                " @import \"bowtie/less/borders\";",
+                " @import \"bowtie/less/buttons\";",
                 "",
-                " @import \"less/dropdown\";",
+                " @import \"bowtie/less/dropdown\";",
                 "",
                 "",
                 "",
-                " @import \"less/forms\";",
-                " @import \"less/harmonica\";",
+                " @import \"bowtie/less/forms\";",
+                " @import \"bowtie/less/harmonica\";",
                 "",
-                " @import \"less/ios-checkbox\";",
+                " @import \"bowtie/less/ios-checkbox\";",
                 "",
-                " @import \"less/navbar\";",
-                " @import \"less/tabs\";",
-                " @import \"less/modals\";",
-                " @import \"less/tables\";",
-                " @import \"less/rating\";",
-                " @import \"less/tooltip\";",
-                " @import \"less/popover\";",
+                " @import \"bowtie/less/navbar\";",
+                " @import \"bowtie/less/tabs\";",
+                " @import \"bowtie/less/modals\";",
+                " @import \"bowtie/less/tables\";",
+                " @import \"bowtie/less/rating\";",
+                " @import \"bowtie/less/tooltip\";",
+                " @import \"bowtie/less/popover\";",
                 "",
-                " @import \"less/slider\";",
-                " @import \"less/pagination\";",
-                " @import \"less/notifications\";",
-                " @import \"less/timeline\";",
-                " @import \"less/login-page\";",
-                " @import \"less/widget-box\";",
+                " @import \"bowtie/less/slider\";",
+                " @import \"bowtie/less/pagination\";",
+                " @import \"bowtie/less/notifications\";",
+                " @import \"bowtie/less/timeline\";",
+                " @import \"bowtie/less/login-page\";",
+                " @import \"bowtie/less/widget-box\";",
                 "",
                 " @color-primary: ",
                 " @color-secondary: ",
@@ -128,17 +131,15 @@ class GenerateCssPresenter extends BasePresenter
                 " @font-family-monospace: "
             );
 
-            $tmp = $tmp . " @import \"less/font-proxima-nova\";";
-            $tmp = $tmp . " @import \"less/font-awesome\";";
-            $tmp = $tmp . " @import \"less/variables-default\";";
-            $tmp = $tmp . " @import \"less/checkbox-01\";";
-            $tmp = $tmp . " @import \"less/filter-checkbox\";";
-            $tmp = $tmp . " @import \"less/filter-radio\";";
-            $tmp = $tmp . " @import \"less/pre-code\";";
-            $tmp = $tmp . " @import \"less/administration\";";
-            $tmp = $tmp . " @import \"less/awesome-grid\";";
-            $tmp = $tmp . " @import \"less/spacing\";";
-            $tmp = $tmp . " @import \"less/font\";";
+            $tmp = $tmp . " @import \"bowtie/less/variables-default\";";
+            $tmp = $tmp . " @import \"bowtie/less/checkbox-01\";";
+            $tmp = $tmp . " @import \"bowtie/less/filter-checkbox\";";
+            $tmp = $tmp . " @import \"bowtie/less/filter-radio\";";
+            $tmp = $tmp . " @import \"bowtie/less/pre-code\";";
+            $tmp = $tmp . " @import \"bowtie/less/administration\";";
+            $tmp = $tmp . " @import \"bowtie/less/awesome-grid\";";
+            $tmp = $tmp . " @import \"bowtie/less/spacing\";";
+            $tmp = $tmp . " @import \"bowtie/less/font\";";
 
             for ($i = 1; $i <= 68; $i ++) {
                 $value = 'input'.$i;
@@ -190,7 +191,7 @@ class GenerateCssPresenter extends BasePresenter
             $parser->parse($tmp);
             $css = $parser->getCss();
 
-            $file = fopen("gen_bowtie/css/bowtie.css", "w");
+            $file = fopen("temp/bowtie/css/bowtie.css", "w");
             fwrite($file, $css);
             fclose($file);
 
@@ -198,35 +199,12 @@ class GenerateCssPresenter extends BasePresenter
 
             // create new zip file
             $zip = new \ZipArchive;
-            $result = $zip->open('gen_bowtie.zip', \ZipArchive::CREATE);
+            $result = $zip->open('temp/gen_bowtie.zip', \ZipArchive::CREATE);
 
             if ($result === true) {
                 $zip->addFile("gen_bowtie/css/bowtie.css", "css/bowtie.css");
                 $zip->addFile("gen_bowtie/index.html", "index.html");
 
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-alt-black.otf", "fonts/proxima/proxima-nova-alt-black.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-alt-bold.otf", "fonts/proxima/proxima-nova-alt-bold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-alt-extrabold.otf", "fonts/proxima/proxima-nova-alt-extrabold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-alt-light.otf", "fonts/proxima/proxima-nova-alt-light.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-alt-regular.otf", "fonts/proxima/proxima-nova-alt-regular.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-alt-semibold.otf", "fonts/proxima/proxima-nova-alt-semibold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-alt-thin.otf", "fonts/proxima/proxima-nova-alt-thin.otf");
-
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-black.otf", "fonts/proxima/proxima-nova-black.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-bold.otf", "fonts/proxima/proxima-nova-bold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-extrabold.otf", "fonts/proxima/proxima-nova-extrabold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-light.otf", "fonts/proxima/proxima-nova-light.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-regular.otf", "fonts/proxima/proxima-nova-regular.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-semibold.otf", "fonts/proxima/proxima-nova-semibold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-thin.otf", "fonts/proxima/proxima-nova-thin.otf");
-
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-scosf-black.otf", "fonts/proxima/proxima-nova-scosf-black.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-scosf-bold.otf", "fonts/proxima/proxima-nova-scosf-bold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-scosf-extrabold.otf", "fonts/proxima/proxima-nova-scosf-extrabold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-scosf-light.otf", "fonts/proxima/proxima-nova-scosf-light.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-scosf-regular.otf", "fonts/proxima/proxima-nova-scosf-regular.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-scosf-semibold.otf", "fonts/proxima/proxima-nova-scosf-semibold.otf");
-                $zip->addFile("gen_bowtie/fonts/proxima/proxima-nova-scosf-thin.otf", "fonts/proxima/proxima-nova-scosf-thin.otf");
 
                 $zip->addFile("gen_bowtie/fonts/tiecons/tiecons.eot", "fonts/tiecons/tiecons.eot");
                 $zip->addFile("gen_bowtie/fonts/tiecons/tiecons.woff", "fonts/tiecons/tiecons.woff");

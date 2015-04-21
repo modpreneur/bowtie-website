@@ -23,3 +23,12 @@ services:
 	- App\Model\UserManager
 	- App\Forms\SignFormFactory
 	router: App\RouterFactory::createRouter
+
+assetic:
+	source:
+		- %appDir%/../vendor/me/bowtie/src/less
+	path: %wwwDir%/bowtie
+
+
+extensions:
+	assetic: me\Assetic
