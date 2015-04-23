@@ -53,7 +53,7 @@ class GenerateCssPresenter extends BasePresenter
             $httpResponse->setHeader('Content-Transfer-Encoding', "binary");
             $httpResponse->setHeader('Content-Description', "File Transfer");
             $httpResponse->setHeader('Content-Length', filesize($this->getZIPPath($zipSurfix)));
-            $this->sendResponse(new FileResponse($this->getZIPPath($zipSurfix), 'gen_bowtie.zip', 'contenttype'));
+            $this->sendResponse(new FileResponse($this->getZIPPath($zipSurfix), 'bowtie_'. $this->getBowtieVersion() . '_.zip', 'contenttype'));
         }
     }
 
