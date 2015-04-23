@@ -8,10 +8,42 @@ use Nette,
 
 class GenerateCssPresenter extends BasePresenter
 {
-    const TEMP = 'temp/bowtie/css/bowtie.css';
+
+    const TEMP = 'temp';
+
+    const CSS  = 'bowtie';
+
+    const ZIP_NAME = 'gen_bowtie';
+
+    const BOWTIE_VERSION = '1.0.0';
 
 
-    public function renderDefault($download = false)
+    private function getCSSPath($surfix){
+        return self::TEMP . '/'. self::CSS . '_' . $surfix . ".css";
+    }
+
+    private function getZIPPath($surfix){
+        return self::TEMP . '/' . self::ZIP_NAME . '_' . $surfix . '.zip';
+    }
+
+    private function getBowtieVersion(){
+        if(is_file(__ROOT__ . '/composer.lock')){
+            $string = file_get_contents(__ROOT__ . '/composer.lock');
+            $json_a = json_decode($string, true);
+            $packages = $json_a['packages'];
+
+            foreach($packages as $package){
+                if($package['name'] == 'me/bowtie'){
+                    return $package['version'];
+                }
+            }
+        }
+
+        return null;
+    }
+
+
+    public function renderDefault($download = false, $zipSurfix)
     {
         if ($download){
             $httpResponse = $this->context->getService('httpResponse');
@@ -20,10 +52,12 @@ class GenerateCssPresenter extends BasePresenter
             $httpResponse->setHeader('Cache-Control', "must-revalidate, post-check=0, pre-check=0");
             $httpResponse->setHeader('Content-Transfer-Encoding', "binary");
             $httpResponse->setHeader('Content-Description', "File Transfer");
-            $httpResponse->setHeader('Content-Length', filesize('gen_bowtie.zip'));
-            $this->sendResponse(new FileResponse('gen_bowtie.zip', 'gen_bowtie.zip', 'contenttype'));
+            $httpResponse->setHeader('Content-Length', filesize($this->getZIPPath($zipSurfix)));
+            $this->sendResponse(new FileResponse($this->getZIPPath($zipSurfix), 'gen_bowtie.zip', 'contenttype'));
         }
     }
+
+
 
     protected function createComponentGenerateCssForm()
     {
@@ -49,14 +83,17 @@ class GenerateCssPresenter extends BasePresenter
         }
 
         $form->addSubmit('send');
-
         $form->onSuccess[] = array($this, 'cssFormSubmitted');
 
         return $form;
     }
 
-    public function cssFormSubmitted($form, $values)
+
+
+    public function cssFormSubmitted(UI\Form $form, $values)
     {
+        $surfix = Nette\Utils\Random::generate(20);
+
         if ($form->isSuccess()) {
             $tmp = "";
 
@@ -177,45 +214,41 @@ class GenerateCssPresenter extends BasePresenter
                 }
             }
 
-            /*try{
-                $parser = new \Less_Parser();
-                $parser->parse($tmp);
-                $css = $parser->getCss();
-            }catch(\Exception $e){
-                $error_message = $e->getMessage();
-                //echo $error_message;
-            }*/
 
             $options = array('compress'=>true);
             $parser = new \Less_Parser($options);
             $parser->parse($tmp);
             $css = $parser->getCss();
 
-            $file = fopen("temp/bowtie/css/bowtie.css", "w");
+            $file = fopen($this->getCSSPath($surfix), "w");
+            fwrite($file,
+                '/*!
+'.'* Bowtie ' . $this->getBowtieVersion() . ' (http://bowtiecss.com)
+'.'* Copyright ' . date('Y') .' modernipodnikatel.cz
+'.'* Licensed under MIT
+'.'*/
+');
             fwrite($file, $css);
             fclose($file);
 
-            //dump($values);
-
             // create new zip file
             $zip = new \ZipArchive;
-            $result = $zip->open('temp/gen_bowtie.zip', \ZipArchive::CREATE);
+            $result = $zip->open( $this->getZIPPath($surfix), \ZipArchive::CREATE );
 
-            if ($result === true) {
-                $zip->addFile("gen_bowtie/css/bowtie.css", "css/bowtie.css");
-                $zip->addFile("gen_bowtie/index.html", "index.html");
+            if ($result) {
+                $zip->addFile($this->getCSSPath($surfix), "src/css/bowtie.css");
+                $zip->addFile("bowtie/index.html", "index.html");
 
-
-                $zip->addFile("gen_bowtie/fonts/tiecons/tiecons.eot", "fonts/tiecons/tiecons.eot");
-                $zip->addFile("gen_bowtie/fonts/tiecons/tiecons.woff", "fonts/tiecons/tiecons.woff");
-                $zip->addFile("gen_bowtie/fonts/tiecons/tiecons.svg", "fonts/tiecons/tiecons.svg");
-                $zip->addFile("gen_bowtie/fonts/tiecons/tiecons.ttf", "fonts/tiecons/tiecons.ttf");
+                $zip->addFile("bowtie/fonts/tiecons/tiecons.eot", "src/fonts/tiecons/tiecons.eot");
+                $zip->addFile("bowtie/fonts/tiecons/tiecons.woff", "src/fonts/tiecons/tiecons.woff");
+                $zip->addFile("bowtie/fonts/tiecons/tiecons.svg", "src/fonts/tiecons/tiecons.svg");
+                $zip->addFile("bowtie/fonts/tiecons/tiecons.ttf", "src/fonts/tiecons/tiecons.ttf");
 
                 $zip->close();
             }
         }
 
         $download = true;
-        $this->redirect('GenerateCss:default', $download);
+        $this->redirect('GenerateCss:default', $download, $surfix);
     }
 }

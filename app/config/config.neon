@@ -27,6 +27,9 @@ services:
 assetic:
 	source:
 		- %appDir%/../vendor/me/bowtie/src/less
+		- %appDir%/../vendor/me/bowtie/src/fonts
+		- %appDir%/../vendor/me/bowtie/index.html
+
 	path: %wwwDir%/bowtie
 
 
