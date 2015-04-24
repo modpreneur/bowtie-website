@@ -1,3 +1,6 @@
+{block head}
+    <script type="text/javascript" src="{$basePath}/js/jscolor/jscolor.js"></script>
+{/block}
 {block content}
 
     <div id="wrapper">
@@ -52,14 +55,14 @@
                                 <a class="button button-secondary" href="bowtie-1.0.0.zip">Download <span class="bowtie bowtie-download"></span></a>
                             </div>*}
 
-                            <form n:name = 'generateCssForm' name = 'main_form'>
+
+                            <form n:name = 'generateCssForm' name = 'main_form' class="main-form primary-form">
 
                                 <div class="section-item-main">
                                     <div class="section-item">
                                         <h3 id="select-modules-navigate">Select modules</h3>
                                         <p></p>
                                     </div>
-
                                     <div class='main-form primary-form select-modules-checkboxes'>
                                         <div class="row">
                                             <div class="form-checkbox">
@@ -154,6 +157,23 @@
                                                     <input n:name = "input30" id="input30" type="checkbox" checked>
                                                     <label n:name = "input30" class="checkbox" for="input30">Widget box</label>
                                                 </div>
+                                                <div>
+                                                    <input n:name = "input71" id="input71" type="checkbox" checked>
+                                                    <label n:name = "input71" class="checkbox" for="input71">Tiecons</label>
+                                                </div>
+                                                <div>
+                                                    <input n:name = "input72" id="input72" type="checkbox" checked>
+                                                    <label n:name = "input72" class="checkbox" for="input72">Pre code</label>
+                                                </div>
+                                                <div>
+                                                    <input n:name = "input73" id="input73" type="checkbox" checked>
+                                                    <label n:name = "input73" class="checkbox" for="input73">Administration</label>
+                                                </div>
+                                                <!--<div>-->
+                                                    <!--<input n:name = "input" id="input" type="checkbox" checked>-->
+                                                    <!--<label n:name = "input" class="checkbox" for="input">box</label>-->
+                                                <!--</div>-->
+
                                                     <input n:name = "input31" type="checkbox" name="all" id="all" checked>
                                                     <label n:name = "input31" class="checkbox check-all" for="all">Check/Uncheck All</label>
                                             </div>
@@ -169,69 +189,69 @@
                                         <div class="row">
                                             <div class="span-large-8">
                                                 <label n:name = 'input32'>Primary color:</label>
-                                                <input n:name = 'input32' type="text" placeholder="#00aeef" class="row">
+                                                <input n:name = 'input32' type="text" value="#00aeef" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-8">
                                                 <label n:name = 'input33'>Secondary color:</label>
-                                                <input n:name = 'input33' type="text" placeholder="#505050" class="row">
+                                                <input n:name = 'input33' type="text" value="#505050" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-8">
                                                 <label n:name = 'input34'>Tertiary color:</label>
-                                                <input n:name = 'input34' type="text" placeholder="#1F3A93" class="row">
+                                                <input n:name = 'input34' type="text" value="#1F3A93" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-24"><hr/></div>
                                         </div>
                                         <div class="row">
                                             <div class="span-large-6">
                                                 <label n:name = 'input35'>Info color:</label>
-                                                <input n:name = 'input35' type="text" placeholder="#2ba6cb" class="row">
+                                                <input n:name = 'input35' type="text" value="#2ba6cb" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input36'>Success color:</label>
-                                                <input n:name = 'input36' type="text" placeholder="#5da423" class="row">
+                                                <input n:name = 'input36' type="text" value="#5da423" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input37'>Warning color:</label>
-                                                <input n:name = 'input37' type="text" placeholder="#FF6600" class="row">
+                                                <input n:name = 'input37' type="text" value="#FF6600" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input38'>Danger color:</label>
-                                                <input n:name = 'input38' type="text" placeholder="#FF0000" class="row">
+                                                <input n:name = 'input38' type="text" value="#FF0000" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-24"><hr/></div>
                                         </div>
                                         <div class="row">
                                             <div class="span-large-6">
                                                 <label n:name = 'input39'>Red color:</label>
-                                                <input n:name = 'input39' type="text" placeholder="#FF0000" class="row">
+                                                <input n:name = 'input39' type="text" value="#FF0000" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input40'>Green color:</label>
-                                                <input n:name = 'input40' type="text" placeholder="#00FF00" class="row">
+                                                <input n:name = 'input40' type="text" value="#00FF00" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input41'>Blue color:</label>
-                                                <input n:name = 'input41' type="text" placeholder="#0000FF" class="row">
+                                                <input n:name = 'input41' type="text" value="#0000FF" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input42'>Yellow color:</label>
-                                                <input n:name = 'input42' type="text" placeholder="#edcf53" class="row">
+                                                <input n:name = 'input42' type="text" value="#edcf53" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input43'>Pink color:</label>
-                                                <input n:name = 'input43' type="text" placeholder="#FF66CC" class="row">
+                                                <input n:name = 'input43' type="text" value="#FF66CC" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input44'>Brown color:</label>
-                                                <input n:name = 'input44' type="text" placeholder="#8A5826" class="row">
+                                                <input n:name = 'input44' type="text" value="#8A5826" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input45'>Orange color:</label>
-                                                <input n:name = 'input45' type="text" placeholder="#FF9933" class="row">
+                                                <input n:name = 'input45' type="text" value="#FF9933" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                             <div class="span-large-6">
                                                 <label n:name = 'input46'>Purple color:</label>
-                                                <input n:name = 'input46' type="text" placeholder="#751975" class="row">
+                                                <input n:name = 'input46' type="text" value="#751975" class="row color { hash:true, pickerPosition:'top' }">
                                             </div>
                                         </div>
                                     </div>
@@ -342,7 +362,7 @@
                                                 <label n:name = 'input63'>Base line height:</label>
                                                 <input n:name = 'input63' type="text" placeholder="1.618" class="row">
                                             </div>
-                                            <div class="span-large-8">
+                                            <div class="span-large-12">
                                                 <div class="form-select">
                                                     <label n:name = 'input64' class="label">Font family base
                                                         <div class="select-style">
@@ -351,11 +371,11 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div class="span-large-8">
-                                                <label n:name = 'input65'>Font family base:</label>
-                                                <input n:name = 'input65' type="text" placeholder="@font-family-sans-serif" class="row">
-                                            </div>
-                                            <div class="span-large-8">
+                                            <!--<div class="span-large-8">-->
+                                                <!--<label n:name = 'input65'>Font family base:</label>-->
+                                                <!--<input n:name = 'input65' type="text" placeholder="@font-family-sans-serif" class="row">-->
+                                            <!--</div>-->
+                                            <div class="span-large-12">
                                                 <label n:name = 'input66'>Font family, sans serif:</label>
                                                 <input n:name = 'input66' type="text" placeholder="'Arial', sans-serif" class="row">
                                             </div>
@@ -398,10 +418,7 @@
 
                                 <div class="section-item-main">
                                     <div class="section-item">
-                                        <h3 id="download-bottom-navigate">Download</h3>
-                                        <p></p>
-
-                                        <input n:name= 'send' value = 'Download' class="button button-secondary">
+                                        <input n:name= 'send' value = 'Download' id="download-bottom-navigate" class="button button-secondary" style="width: 100%;padding: 15px 10px; margin-top: 40px">
 
                                         {*<a href="#" onclick = "document.forms['generateCssForm'].submit();return false;" class="button button-secondary">Download <span class="bowtie bowtie-download"></span></a>*}
                                     </div>

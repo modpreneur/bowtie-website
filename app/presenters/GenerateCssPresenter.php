@@ -18,6 +18,84 @@ class GenerateCssPresenter extends BasePresenter
     const BOWTIE_VERSION = '1.0.0';
 
 
+    private $settings = array(
+        " @import \"bowtie/less/alerts\";",
+        " @import \"bowtie/less/awesome-grid\";",
+        " @import \"bowtie/less/awesome-menu\";",
+        " @import \"bowtie/less/bna-widget\";",
+        " @import \"bowtie/less/borders\";",
+        " @import \"bowtie/less/buttons\";",
+        " @import \"bowtie/less/checkbox-01\";",
+        " @import \"bowtie/less/dropdown\";",
+        " @import \"bowtie/less/filter-checkbox\";",
+        " @import \"bowtie/less/filter-radio\";",
+        " @import \"bowtie/less/font\";",
+        " @import \"bowtie/less/forms\";",
+        " @import \"bowtie/less/harmonica\";",
+        " @import \"bowtie/less/images\";",
+        " @import \"bowtie/less/ios-checkbox\";",
+        " @import \"bowtie/less/spacing\";",
+        " @import \"bowtie/less/navbar\";",
+        " @import \"bowtie/less/tabs\";",
+        " @import \"bowtie/less/modals\";",
+        " @import \"bowtie/less/tables\";",
+        " @import \"bowtie/less/rating\";",
+        " @import \"bowtie/less/tooltip\";",
+        " @import \"bowtie/less/popover\";",
+        " @import \"bowtie/less/tags\";",
+        " @import \"bowtie/less/slider\";",
+        " @import \"bowtie/less/pagination\";",
+        " @import \"bowtie/less/notifications\";",
+        " @import \"bowtie/less/timeline\";",
+        " @import \"bowtie/less/login-page\";",
+        " @import \"bowtie/less/widget-box\";",
+        "",
+        " @color-primary: ",
+        " @color-secondary: ",
+        " @color-tertiary: ",
+        " @color-info: ",
+        " @color-success: ",
+        " @color-warning: ",
+        " @color-danger: ",
+        " @color-red:",
+        " @color-green:",
+        " @color-blue:",
+        " @color-yellow:",
+        " @color-pink:",
+        " @color-brown:",
+        " @color-orange:",
+        " @color-purple:",
+        " @columns: ",
+        "",
+        " @column-padding-vertical: ",
+        " @column-padding-horizontal: ",
+        " @column-margin-vertical: ",
+        " @column-margin-horizontal: ",
+        " @brackpoint-mini: ",
+        " @brackpoint-small: ",
+        " @brackpoint-medium: ",
+        " @brackpoint-large: ",
+        " @brackpoint-xlarge: ",
+        " @border-radius-small: ",
+        " @border-radius-vertical: ",
+        " @border-radius-large: ",
+        " @font-size-base: ",
+        " @headings-line-height: ",
+        " @line-height-base:",
+        "",
+        "",
+        " @font-family-sans-serif: ",
+        " @font-family-serif: ",
+        " @font-family-monospace: ",
+        "",
+        "",
+        " @import \"bowtie/less/tiecons\";",
+        " @import \"bowtie/less/pre-code\";",
+        " @import \"bowtie/less/administration\";"
+    );
+
+
+
     private function getCSSPath($surfix){
         return self::TEMP . '/'. self::CSS . '_' . $surfix . ".css";
     }
@@ -64,7 +142,7 @@ class GenerateCssPresenter extends BasePresenter
         $form = new UI\Form;
         global $tmp;
 
-        for ($i = 1; $i <= 68; $i ++){
+        for ($i = 1; $i <= count($this->settings); $i ++){
             $tmp = 'input' . $i;
             switch($i) {
                 case ($i <= 31):
@@ -76,6 +154,12 @@ class GenerateCssPresenter extends BasePresenter
                 case ($i == 64):
                     $form->addSelect($tmp, NULL, array('sans_serif' => 'Font family, sans serif',
                         'serif' => 'Font family, serif', 'monospace' => 'Font family, monospace'));
+                    break;
+                case ($i == 72):
+                    $form->addCheckbox($tmp);
+                    break;
+                case ($i == 73):
+                    $form->addCheckbox($tmp);
                     break;
                 default:
                     $form->addText($tmp);
@@ -96,94 +180,19 @@ class GenerateCssPresenter extends BasePresenter
 
         if ($form->isSuccess()) {
             $tmp = "";
-
-            $string = array(
-                " @import \"bowtie/less/alerts\";",
-                "",
-                " @import \"bowtie/less/awesome-menu\";",
-                " @import \"bowtie/less/bna-widget\";",
-                " @import \"bowtie/less/borders\";",
-                " @import \"bowtie/less/buttons\";",
-                "",
-                " @import \"bowtie/less/dropdown\";",
-                "",
-                "",
-                "",
-                " @import \"bowtie/less/forms\";",
-                " @import \"bowtie/less/harmonica\";",
-                "",
-                " @import \"bowtie/less/ios-checkbox\";",
-                "",
-                " @import \"bowtie/less/navbar\";",
-                " @import \"bowtie/less/tabs\";",
-                " @import \"bowtie/less/modals\";",
-                " @import \"bowtie/less/tables\";",
-                " @import \"bowtie/less/rating\";",
-                " @import \"bowtie/less/tooltip\";",
-                " @import \"bowtie/less/popover\";",
-                "",
-                " @import \"bowtie/less/slider\";",
-                " @import \"bowtie/less/pagination\";",
-                " @import \"bowtie/less/notifications\";",
-                " @import \"bowtie/less/timeline\";",
-                " @import \"bowtie/less/login-page\";",
-                " @import \"bowtie/less/widget-box\";",
-                "",
-                " @color-primary: ",
-                " @color-secondary: ",
-                " @color-tertiary: ",
-                " @color-info: ",
-                " @color-success-: ",
-                " @color-warning: ",
-                " @color-danger: ",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                " @columns: ",
-                "",
-                " @column-padding-vertical: ",
-                " @column-padding-horizontal: ",
-                " @column-margin-vertical: ",
-                " @column-margin-horizontal: ",
-                " @brackpoint-mini: ",
-                " @brackpoint-small: ",
-                " @brackpoint-medium: ",
-                " @brackpoint-large: ",
-                " @brackpoint-xlarge: ",
-                " @border-radius-small: ",
-                " @border-radius-vertical: ",
-                " @border-radius-large: ",
-                " @font-size-base: ",
-                "",
-                "",
-                "",
-                "",
-                " @font-family-sans-serif: ",
-                " @font-family-serif: ",
-                " @font-family-monospace: "
-            );
-
+            $settings = $this->settings;
             $tmp = $tmp . " @import \"bowtie/less/variables-default\";";
-            $tmp = $tmp . " @import \"bowtie/less/checkbox-01\";";
-            $tmp = $tmp . " @import \"bowtie/less/filter-checkbox\";";
-            $tmp = $tmp . " @import \"bowtie/less/filter-radio\";";
-            $tmp = $tmp . " @import \"bowtie/less/pre-code\";";
-            $tmp = $tmp . " @import \"bowtie/less/administration\";";
-            $tmp = $tmp . " @import \"bowtie/less/awesome-grid\";";
-            $tmp = $tmp . " @import \"bowtie/less/spacing\";";
-            $tmp = $tmp . " @import \"bowtie/less/font\";";
 
-            for ($i = 1; $i <= 68; $i ++) {
+            $enableIcons = false;
+
+            for ($i = 1; $i <= count($settings); $i ++) {
                 $value = 'input'.$i;
+                //dump($values->{$value});
+
                 switch($i){
                     case ($i <= 31):
                         if ($values->$value){
-                            $tmp = $tmp . $string[$i-1];
+                            $tmp = $tmp . $settings[$i-1];
                         }
                         break;
                     case ($i == 48):
@@ -207,9 +216,17 @@ class GenerateCssPresenter extends BasePresenter
                                 $tmp = $tmp . " @font-family-base: @font-family-monospace;";
                         }
                         break;
+                    case ($i == 71):
+                        if($values->{$value}) $enableIcons = true;
+                        break;
+                    case ($i >= 72):
+                        if ($values->$value){
+                            $tmp = $tmp . $settings[$i-1];
+                        }
+                        break;
                     default:
                         if (!empty($values->$value)){
-                            $tmp = $tmp . $string[$i-1] . $values->$value . ";";
+                            $tmp = $tmp . $settings[$i-1] . $values->$value . ";";
                         }
                 }
             }
@@ -235,20 +252,23 @@ class GenerateCssPresenter extends BasePresenter
             $zip = new \ZipArchive;
             $result = $zip->open( $this->getZIPPath($surfix), \ZipArchive::CREATE );
 
-            if ($result) {
-                $zip->addFile($this->getCSSPath($surfix), "src/css/bowtie.css");
-                $zip->addFile("bowtie/index.html", "index.html");
-
+            if ($enableIcons) {
                 $zip->addFile("bowtie/fonts/tiecons/tiecons.eot", "src/fonts/tiecons/tiecons.eot");
                 $zip->addFile("bowtie/fonts/tiecons/tiecons.woff", "src/fonts/tiecons/tiecons.woff");
                 $zip->addFile("bowtie/fonts/tiecons/tiecons.svg", "src/fonts/tiecons/tiecons.svg");
                 $zip->addFile("bowtie/fonts/tiecons/tiecons.ttf", "src/fonts/tiecons/tiecons.ttf");
+            }
+            if ($result) {
+                $zip->addFile($this->getCSSPath($surfix), "src/css/bowtie.css");
+                $zip->addFile("bowtie/index.html", "index.html");
 
                 $zip->close();
             }
         }
 
         $download = true;
+
+        //exit;
         $this->redirect('GenerateCss:default', $download, $surfix);
     }
 }
