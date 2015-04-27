@@ -125,19 +125,79 @@ a.social-popout span {
     /*background-repeat: no-repeat;*/
     margin-bottom: 105px;
 }
+/*.homepage .section-02 {*/
+    /*background-image: url(../img/head-icons/head-bg-icon-01.png),url(../img/head-icons/head-bg-icon-03.png),url(../img/head-icons/head-bg-icon-04.png),url(../img/head-icons/head-bg-icon-05.png),url(../img/head-icons/head-bg-icon-06.png),url(../img/head-icons/head-bg-icon-07.png),url(../img/head-icons/head-bg-icon-09.png),url(../img/head-icons/head-bg-icon-10.png),url(../img/section-02-bg.jpg);*/
+    /*background-position:    30% 10%,*/
+                            /*15% 30%,*/
+                            /*85% 30%,*/
+                            /*5% 10%,*/
+                            /*100% 10%,*/
+                            /*-100px 30%,*/
+                            /*105% 30%,*/
+                            /*70% 10%,*/
+                            /*left top;*/
+    /*background-repeat: no-repeat;*/
+    /*background-color: transparent;*/
+    /*overflow: hidden;*/
+/*}*/
 .homepage .section-02 {
-    background-image: url(../img/head-icons/head-bg-icon-01.png),url(../img/head-icons/head-bg-icon-03.png),url(../img/head-icons/head-bg-icon-04.png),url(../img/head-icons/head-bg-icon-05.png),url(../img/head-icons/head-bg-icon-06.png),url(../img/head-icons/head-bg-icon-07.png),url(../img/head-icons/head-bg-icon-09.png),url(../img/head-icons/head-bg-icon-10.png),url(../img/section-02-bg.jpg);
-    background-position:    30% 10%,
-                            15% 30%,
-                            85% 30%,
-                            5% 10%,
-                            100% 10%,
-                            -100px 30%,
-                            105% 30%,
-                            70% 10%,
-                            left top;
+    background-image: url(../img/section-02-bg.jpg);
+    background-position: left top;
     background-repeat: no-repeat;
     background-color: transparent;
+    overflow: hidden;
+}
+#shell {
+    display: block;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 1000px;
+    overflow-x: hidden;
+}
+.icon-01-bg {
+    position: absolute;
+    top: 13%;
+    left: 27%;
+}
+.icon-03-bg {
+    position: absolute;
+    top: 38%;
+    left: 13%;
+}
+.icon-04-bg {
+    position: absolute;
+    top: 39%;
+    left: auto;
+    right: 13%;
+}
+.icon-05-bg {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+}
+.icon-06-bg {
+    position: absolute;
+    top: 12%;
+    left: auto;
+    right: 0;
+}
+.icon-07-bg {
+    position: absolute;
+    top: 38%;
+    left: -7%;
+}
+.icon-09-bg {
+    position: absolute;
+    top: 37%;
+    left: auto;
+    right: -5%;
+}
+.icon-10-bg {
+    position: absolute;
+    top: 12%;
+    left: auto;
+    right: 27%;
 }
 .homepage .section-02 .jumbotron img.logo-bowtie {
     margin-top: 61px;
@@ -185,8 +245,7 @@ a.social-popout span {
 }
 .homepage .section-02 .jumbotron p span.header-text {
     font-size: 22px;
-    line-height: 12px;
-    margin-top: 15px;
+    margin-top: 0px;
     font-family: 'ProximaNova-Light', Sans-Serif;
 }
 .section-02 .last-text {
@@ -255,23 +314,24 @@ a.social-popout span {
 .homepage .section-05 a:hover:before {
     content: "";
     position: absolute;
-    top: 25%;
-    left: 40%;
-    background: url("../img/icon-search.svg") no-repeat;
-    width: 57px;
-    height: 56px;
+    top: 0;
+    left: 20px;
+    background: url("../img/icon-search.svg") no-repeat 97px 25px;
+    width: 259px;
+    height: 104px;
     z-index: 1;
+    background-color: rgba(0,0,0,0.4);
 }
 
 .getting-started .section-02 {
     background-image: url(../img/obdlnk-1-kopie.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: 50%;
-    min-height: 337px;
+    background-position: 50% 0;
+    min-height: 260px;
 }
 .getting-started .section-02 .jumbotron {
-    padding-top: 88px;
+    padding-top: 55px;
 }
 .getting-started .section-02 span.first-text {
     color: white;
@@ -284,6 +344,29 @@ a.social-popout span {
     font-weight: 400;
     line-height: 1.1;
     margin-top: 29px;
+}
+.getting-started-text {
+    font-family: 'ProximaNova-Light', Sans-Serif;
+    font-size: large;
+    margin-bottom: 15px;
+}
+.download-table, .cdn-table {
+    margin: 0px 10px 0px 10px;
+}
+.table-left, .table-right {
+    max-width: 50%;
+    float: left;
+}
+.table-head {
+    font-size: 24px;
+    font-family: 'ProximaNova-Regular', Sans-Serif;
+    color: #1f3a93;
+}
+.table-text {
+    font-family: 'ProximaNova-Light', Sans-Serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-right: 14px;
 }
 #wrapper {
     position: relative;
@@ -497,6 +580,9 @@ pre:hover {
 a.social-popout span {
     color: #1f3a93;
 }
+a.social-popout span:hover {
+    color: #00AEEF;
+}
 .section-06 span.bowtie.bowtie-logobowtie {
     position: relative;
 }
@@ -506,9 +592,12 @@ a.social-popout span {
     font-family: "Proxima Nova",sans-serif;
     font-size: 15px !important;
     font-weight: 600;
-    width: 130px;
+    width: 118px;
     bottom: 0;
     left: 55px;
+}
+.section-07 {
+    margin-top: 50px;
 }
 
 /*RESPONZIVE*/
@@ -850,7 +939,7 @@ li.active-menu + ul.sub-side-group {
     padding-bottom: 30px;
 }
 .generatecss .main-form.select-modules-checkboxes label.checkbox {
-    min-width: 130px;
+    min-width: 140px;
 }
 .generatecss .form-checkbox div {
     display: inline;
@@ -880,4 +969,9 @@ li.active-menu + ul.sub-side-group {
     border: 2px solid #1F3A93;
     background-color: #1F3A93;
     color: #FFF;
+}
+@media screen and (max-width: 1024px) {
+    #shell {
+        display: none;
+    }
 }

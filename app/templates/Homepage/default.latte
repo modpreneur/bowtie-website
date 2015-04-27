@@ -1,6 +1,37 @@
+{block head}
+<script type="text/javascript" src="js/plax.js"></script>
+<script type="text/javascript">
+//    $(document).ready(function () {
+//        $('#shell img').plaxify()
+//        $.plax.enable()
+//    })
+
+
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
+jQuery(document).ready(function($){
+    if(!isMobile) {
+        $('#shell img').plaxify()
+        $.plax.enable()
+    }
+});
+
+
+</script>
+{/block}
 {block content}
     <div class="homepage">
         <div class="section-02">
+            <div id="shell">
+                <img src="img/head-icons/head-bg-icon-01.png" class="icon-01-bg" width="135" height="152" data-xrange="10" data-yrange="20" data-invert="true" />
+                <img src="img/head-icons/head-bg-icon-03.png" class="icon-03-bg" width="224" height="121" data-xrange="20" data-yrange="20" />
+                <img src="img/head-icons/head-bg-icon-04.png" class="icon-04-bg" width="189" height="108" data-xrange="30" data-yrange="10" data-invert="true" />
+                <img src="img/head-icons/head-bg-icon-05.png" class="icon-05-bg" width="120" height="201" data-xrange="20" data-yrange="30" />
+                <img src="img/head-icons/head-bg-icon-06.png" class="icon-06-bg" width="229" height="146" data-xrange="30" data-yrange="20" data-invert="true" />
+                <img src="img/head-icons/head-bg-icon-07.png" class="icon-07-bg" width="184" height="142" data-xrange="20" data-yrange="10" />
+                <img src="img/head-icons/head-bg-icon-09.png" class="icon-09-bg" width="146" height="145" data-xrange="10" data-yrange="30" data-invert="true" />
+                <img src="img/head-icons/head-bg-icon-10.png" class="icon-10-bg" width="146" height="145" data-xrange="20" data-yrange="20" />
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="span-medium-24 text-center jumbotron">
@@ -40,7 +71,7 @@
                         <p>What else Bowtie does?</p>
                     </div>
                     <div class="span-medium-12 text-left">
-                        <a class="button button-primary" n:href="Features:">More features &raquo;</a>
+                        <a class="button button-primary" n:href="Features:">More features <span class="tiecons tiecons-double-arrow-right padding-left-10 font-14"></span></a>
                     </div>
                 </div>
             </div>
