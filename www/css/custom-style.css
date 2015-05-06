@@ -2,6 +2,10 @@ body {
     background: #ffffff;
     font-family: "Proxima Nova", sans-serif;
 }
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
 .button-primary {
     background: transparent;
     border: 3px solid #FFF;
@@ -652,6 +656,12 @@ a.social-popout span:hover {
 }
 .section-07 {
     margin-top: 50px;
+}
+.bna .bna-content .before {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 /*RESPONZIVE*/
