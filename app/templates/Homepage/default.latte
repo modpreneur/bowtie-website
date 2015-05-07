@@ -1,0 +1,234 @@
+{block head}
+<script type="text/javascript" src="js/plax.js"></script>
+<script type="text/javascript">
+//    $(document).ready(function () {
+//        $('#shell img').plaxify()
+//        $.plax.enable()
+//    })
+
+
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
+jQuery(document).ready(function($){
+    if(!isMobile) {
+        $('#shell img').plaxify()
+        $.plax.enable()
+    }
+});
+
+
+</script>
+{/block}
+{block content}
+    <div class="homepage">
+        <div class="section-02">
+            <div id="shell">
+                <img src="img/head-icons/head-bg-icon-01.png" class="icon-01-bg" width="135" height="152" data-xrange="10" data-yrange="20" data-invert="true" />
+                <img src="img/head-icons/head-bg-icon-03.png" class="icon-03-bg" width="224" height="121" data-xrange="20" data-yrange="20" />
+                <img src="img/head-icons/head-bg-icon-04.png" class="icon-04-bg" width="189" height="108" data-xrange="30" data-yrange="10" data-invert="true" />
+                <img src="img/head-icons/head-bg-icon-05.png" class="icon-05-bg" width="120" height="201" data-xrange="20" data-yrange="30" />
+                <img src="img/head-icons/head-bg-icon-06.png" class="icon-06-bg" width="229" height="146" data-xrange="30" data-yrange="20" data-invert="true" />
+                <img src="img/head-icons/head-bg-icon-07.png" class="icon-07-bg" width="184" height="142" data-xrange="20" data-yrange="10" />
+                <img src="img/head-icons/head-bg-icon-09.png" class="icon-09-bg" width="146" height="145" data-xrange="10" data-yrange="30" data-invert="true" />
+                <img src="img/head-icons/head-bg-icon-10.png" class="icon-10-bg" width="146" height="145" data-xrange="20" data-yrange="20" />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="span-medium-24 text-center jumbotron">
+                        <span class="bowtie bowtie-logoiconbowtie color-white line-height-14" style="font-size: 244px;line-height: 1.4;"></span>
+                        <p><span class="first-text">BOWTIE CSS</span>
+                            <span class="header-text display-block">Complex ideas with simple solution.</span>
+                            <span class="header-text display-block">Forget the limitations.</span></p>
+                        <a class="button button-primary" href="bowtie-1.0.0.zip">Download <span class="bowtie bowtie-download"></span></a>
+                        <p class="second-text">Unlimited power of your imagination.
+                            <br/>All we've done is in your hands.</p>
+                        <p class="last-text">We put simplicity and perfection, the irreconcilable elements, together. Look at your projects from the new point of view. Experience of coding where's NO necessity of inline styles. Way of designation of classes so intuitive you don't even have to peek at the documentation. Maybe never.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span-medium-8 span-small-12">
+                        <img src="img/icons.jpg" alt="Vector Icons" class="img-responsive"/>
+                        <p class="vector-icons-head">Vector icons</p>
+                        <p class="vector-icons-text">We are introducing Tiecons - the vector world. Imagine the perfect moment when every website will be prepared for all resolutions. No blurred images, no colorization troubles. Better than the best - just gorgeous.</p>
+                    </div>
+                    <div class="span-medium-8 span-small-12">
+                        <img src="img/less.jpg" alt="Vector Icons" class="img-responsive"/>
+                        <p class="vector-icons-head">Modern technologies</p>
+                        <p class="vector-icons-text">Bowtie is purely CSS framework. Using the newest technologies allows us to originate magic results. As simple as a wave of a wand. Feel the improvement of working progress. Made with love for coders - by coders.</p>
+                    </div>
+                    <div class="span-medium-8 span-small-13 offset-small-6 offset-medium-0">
+                        <img src="img/devices.jpg" alt="Vector Icons" class="img-responsive"/>
+                        <p class="vector-icons-head">All devices support</p>
+                        <p class="vector-icons-text">Enjoy the same experience of your website with no dependence which device you're using. Responsive website is now easy to do. There's no rule which tells you to impoverish content of your web - at least not with Bowtie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-03 background-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="span-medium-12 text-right">
+                        <p>What else Bowtie does?</p>
+                    </div>
+                    <div class="span-medium-12 text-left">
+                        <a class="button button-primary" n:href="Features:">More features <span class="tiecons tiecons-double-arrow-right padding-left-10 font-14"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-04">
+            <div class="container">
+                <div class="row">
+                    <div class="span-medium-24">
+                        <div class="harmonica text-left">
+                            <p class="harmonica-head text-center">Frequently Asket Questions</p>
+                            <input type="radio" id="harmonica-01" name="list"/>
+                            <div class="main-panel">
+                                <label for="harmonica-01" class="harmonica-label"><span>Why should I use Bowtie?</span>
+                                    <span class="pull-right bowtie bowtie-sipka"></span>
+                                </label>
+                                <div class="show-harmonica">
+                                    <p>Before we developed Bowtie, we've tried many CSS frameworks and we've kept hitting on complexity and various kinds of problems, which always slowed down our productivity. Bowtie is framework, which solves theese issues and on top of that it's really easy to learn.</p>
+                                </div>
+                            </div>
+
+                            <input type="radio" id="harmonica-02" name="list"/>
+                            <div class="main-panel">
+                                <label for="harmonica-02" class="harmonica-label"><span>Can I get Bowtie through Composer?</span>
+                                    <span class="pull-right bowtie bowtie-sipka"></span>
+                                </label>
+                                <div class="show-harmonica">
+                                    <p>We understand that for many big projects Composer is best way, how to keep your packages up to date. So yes, you can get Bowtie throught Composer. Just visit <a n:href="GettingStarted:">Getting started</a> section for more informations.</p>
+                                </div>
+                            </div>
+
+                            <input type="radio" id="harmonica-03" name="list"/>
+                            <div class="main-panel">
+                                <label for="harmonica-03" class="harmonica-label"><span>Is there any option getting only some parts of Bowtie?</span>
+                                    <span class="pull-right bowtie bowtie-sipka"></span>
+                                </label>
+                                <div class="show-harmonica">
+                                    <p>As number of modules was rising we started to realize, that some of them can be unnecessary for our users. We've thought this through and came up with <a n:href="GenerateCss:">generator</a> where you can customize Bowtie as much as you want.</p>
+                                </div>
+                            </div>
+
+                            <!--<input type="radio" id="harmonica-04" name="list"/>-->
+                            <!--<div class="main-panel">-->
+                                <!--<label for="harmonica-04" class="harmonica-label"><span>Can I use Bowtie along with another CSS framework?</span>-->
+                                    <!--<span class="pull-right bowtie bowtie-sipka"></span>-->
+                                <!--</label>-->
+                                <!--<div class="show-harmonica">-->
+                                    <!--<p>Of course you can. It's your project and if there's anything you'll be missing in Bowtie, you can include to your project another framework. And let us know, what you're missing and we definitely will work on that so you won't need other frameworks anymore.</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                            <input type="radio" id="harmonica-05" name="list"/>
+                            <div class="main-panel">
+                                <label for="harmonica-05" class="harmonica-label"><span>Will Bowtie be compatible with old versions?</span>
+                                    <span class="pull-right bowtie bowtie-sipka"></span>
+                                </label>
+                                <div class="show-harmonica">
+                                    <p>We completely understand that you don't want to re-code your website everytime after update and we will do everything we can to keep our versions compatible. And if there will occur some necesity to break this rule we promise we will sufficiently inform you.</p>
+                                </div>
+                            </div>
+
+                            <input type="radio" id="harmonica-06" name="list"/>
+                            <div class="main-panel">
+                                <label for="harmonica-06" class="harmonica-label"><span>Can I use Bowtie for mobile devices?</span>
+                                    <span class="pull-right bowtie bowtie-sipka"></span>
+                                </label>
+                                <div class="show-harmonica">
+                                    <p>We've noticed how many people surf on internet through their cell phones and tablets and because we don't want to oversleep this state we made Bowtie completely ready for every kind of mobile devices so you can develop your websites no matter whence your visitors came from.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="section-05" style="display: none;">-->
+        <div class="section-05">
+            <div class="container">
+                <div class="row">
+                    <div class="span-medium-24"><p class="text-center">Made with Bowtie</p></div>
+                </div>
+                <div class="row">
+                    <div class="span-medium-6 span-small-12 text-center"><a href="#">
+                        <div class="image">
+                            <img src="img/devices.jpg" alt="example-01" class="img-responsive"/>
+                        </div>
+                    </a></div>
+                    <div class="span-medium-6 span-small-12 text-center"><a href="#">
+                        <div class="image">
+                            <img src="img/devices.jpg" alt="example-01" class="img-responsive"/>
+                        </div>
+                    </a></div>
+                    <div class="span-medium-6 span-small-12 text-center"><a href="#">
+                        <div class="image">
+                            <img src="img/devices.jpg" alt="example-01" class="img-responsive"/>
+                        </div>
+                    </a></div>
+                    <div class="span-medium-6 span-small-12 text-center"><a href="#">
+                        <div class="image">
+                            <img src="img/devices.jpg" alt="example-01" class="img-responsive"/>
+                        </div>
+                    </a></div>
+                </div>
+                <div class="row small-hidden">
+                    <div class="span-medium-6 text-center"><a href="#">
+                        <div class="image">
+                            <img src="img/devices.jpg" alt="example-01" class="img-responsive"/>
+                        </div>
+                    </a></div>
+                    <div class="span-medium-6 text-center"><a href="#">
+                        <div class="image">
+                            <img src="img/devices.jpg" alt="example-01" class="img-responsive"/>
+                        </div>
+                    </a></div>
+                    <div class="span-medium-6 text-center"><a href="#">
+                        <div class="image">
+                            <img src="img/devices.jpg" alt="example-01" class="img-responsive"/>
+                        </div>
+                    </a></div>
+                    <div class="span-medium-6 text-center"><a href="#">
+                        <div class="image">
+                            <img src="img/devices.jpg" alt="example-01" class="img-responsive"/>
+                        </div>
+                    </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{/block}
+
+{block scripts}
+<script type="text/javascript">
+    var allRadios = document.getElementsByName('list');
+    var booRadio;
+    var x = 0;
+    for(x = 0; x < allRadios.length; x++){
+
+        allRadios[x].onclick = function() {
+            if(booRadio == this){
+                this.checked = false;
+                booRadio = null;
+            }else{
+                booRadio = this;
+            }
+        };
+    }
+
+    function faqBug(){
+        $('.harmonica-label').children().each(function(){
+            var h = $(this).css('height');
+            if (parseInt(h) > 30) {
+                $(this).closest(".harmonica-label").css("padding-top","3px");
+            }
+        });
+    }
+    $( function() {
+        faqBug();
+    });
+</script>
+{/block}

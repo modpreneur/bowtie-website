@@ -1,0 +1,1067 @@
+body {
+    background: #ffffff;
+    font-family: "Proxima Nova", sans-serif;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+.button-primary {
+    background: transparent;
+    border: 3px solid #FFF;
+    padding: 11px 58px;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.button-primary:hover {
+    border: solid 3px #1F3A93;
+    background-color: #1F3A93;
+    color: #ffffff;
+}
+.button-primary img,
+.button-secondary img {
+    vertical-align: bottom;
+}
+.button-secondary {
+    background: #26b2f1;
+    border: solid 3px #26b2f1;
+    color: #ffffff;
+    padding: 7px 25px;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.button-secondary:hover {
+    border: solid 3px #1F3A93;
+    background-color: #1F3A93;
+    color: #ffffff;
+}
+/*SOCIAL*/
+a.social-popout {
+    height: 48px;
+    width: 48px;
+    margin: 10px;
+    margin-top: 0;
+    display: inline-block;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+a.social-popout span {
+    margin: 8px;
+    font-size: 50px;
+    width: 100%;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+.social-box {
+    text-align: center;
+}
+/*END SOCIAL*/
+.section-01 {
+    background-color: rgb(0, 174, 239);
+}
+.section-01 .menu {
+    background: rgba(255, 255, 255, 0.9);
+    height: 60px;
+    border: none;
+}
+.section-01 .menu ul.main-menu li a {
+    color: #1F3A93 !important;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 5px 22px 5px;
+    margin: 0 15px;
+}
+.section-01 .menu ul.main-menu li a.active,
+.section-01 .menu ul.main-menu li a:hover {
+    border-bottom: none;
+    border-top: solid 5px #00aeef;
+}
+.section-01 .menu ul.main-menu li {
+    padding-top: 22px;
+    padding-bottom: 21px;
+}
+.section-01 .menu .head img {
+    margin-top: 16px;
+}
+.section-06 {
+    height: 162px;
+    background-color: #f0f0f0;
+}
+.section-06 p.absolute {
+    color: #00aeef;
+    font-size: 15px;
+    font-weight: 600;
+    bottom: 0;
+    right: 7px;
+}
+.section-06 .clearfix {
+    margin-top: 45px;
+}
+.section-07 {
+    height: 81px;
+    background-color: #1f3a93;
+    padding: 19px 0;
+}
+.section-07 .navbar li a {
+    color: #728de7;
+    font-size: 17px;
+    font-weight: 600;
+}
+.section-07 .navbar li a:hover {
+    color: #ffffff;
+}
+.section-07 .navbar li {
+    color: #728de7;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.homepage .section-02 {
+    /*background-image: url(../img/section-02-bg.jpg);*/
+    /*background-repeat: no-repeat;*/
+    margin-bottom: 105px;
+}
+/*.homepage .section-02 {*/
+    /*background-image: url(../img/head-icons/head-bg-icon-01.png),url(../img/head-icons/head-bg-icon-03.png),url(../img/head-icons/head-bg-icon-04.png),url(../img/head-icons/head-bg-icon-05.png),url(../img/head-icons/head-bg-icon-06.png),url(../img/head-icons/head-bg-icon-07.png),url(../img/head-icons/head-bg-icon-09.png),url(../img/head-icons/head-bg-icon-10.png),url(../img/section-02-bg.jpg);*/
+    /*background-position:    30% 10%,*/
+                            /*15% 30%,*/
+                            /*85% 30%,*/
+                            /*5% 10%,*/
+                            /*100% 10%,*/
+                            /*-100px 30%,*/
+                            /*105% 30%,*/
+                            /*70% 10%,*/
+                            /*left top;*/
+    /*background-repeat: no-repeat;*/
+    /*background-color: transparent;*/
+    /*overflow: hidden;*/
+/*}*/
+.homepage .section-02 {
+    background-image: url(../img/section-02-bg.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    overflow: hidden;
+}
+#shell {
+    display: block;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 1000px;
+    overflow-x: hidden;
+}
+.icon-01-bg {
+    position: absolute;
+    top: 13%;
+    left: 27%;
+}
+.icon-03-bg {
+    position: absolute;
+    top: 38%;
+    left: 13%;
+}
+.icon-04-bg {
+    position: absolute;
+    top: 39%;
+    left: auto;
+    right: 13%;
+}
+.icon-05-bg {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+}
+.icon-06-bg {
+    position: absolute;
+    top: 12%;
+    left: auto;
+    right: 0;
+}
+.icon-07-bg {
+    position: absolute;
+    top: 38%;
+    left: -7%;
+}
+.icon-09-bg {
+    position: absolute;
+    top: 37%;
+    left: auto;
+    right: -5%;
+}
+.icon-10-bg {
+    position: absolute;
+    top: 12%;
+    left: auto;
+    right: 27%;
+}
+.homepage .section-02 .jumbotron img.logo-bowtie {
+    margin-top: 61px;
+    margin-bottom: 27px;
+}
+.homepage .section-02 .jumbotron p:first-of-type {
+    color: #B4EAFE;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.4;
+}
+.homepage .section-02 .jumbotron p span.first-text {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 52px;
+    letter-spacing: 3px;
+    word-spacing: 8px;
+}
+.homepage .section-02 .button-primary {
+    margin-top: 52px;
+    margin-bottom: 170px;
+}
+.homepage .section-02 .second-text {
+    color: #1F3A93;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.homepage .section-02 p {
+    text-align: center;
+}
+.homepage .section-02 p.vector-icons-head {
+    color: #1F3A93;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+.homepage .section-02 p.vector-icons-text {
+    color: #505050;
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.homepage .section-02 .jumbotron p span.header-text {
+    font-size: 22px;
+    margin-top: 0;
+}
+.section-02 .last-text {
+    margin: 0 auto;
+    max-width: 970px;
+}
+.homepage .last-text {
+    color: #505050;
+    font-size: 19px;
+    font-weight: 400;
+    margin-bottom: 72px;
+}
+.homepage .section-03 {
+    height: 121px;
+}
+.homepage .section-03 p {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 50px 0;
+}
+.homepage .section-03 .button-primary {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 66px;
+    margin: 35px 0;
+}
+.homepage .section-04 {
+    background-image: url("../img/head-icons/bg-FAQ-icons-all.png");
+    background-color: #f0f0f0;
+    background-size: contain;
+    padding-bottom: 135px;
+}
+.homepage .section-04 .harmonica p.harmonica-head {
+    color: #1F3A93;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.homepage .section-04 .harmonica .show-harmonica {
+    padding: 18px 120px 38px 18px;
+}
+.homepage .section-05 {
+    margin-top: 96px;
+    margin-bottom: 82px;
+}
+.homepage .section-05 p {
+    color: #1F3A93;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 87px;
+    position: relative;
+}
+.homepage .section-05 img {
+    background-color: #b3b3b3;
+}
+.homepage .section-05 img:hover {
+}
+.homepage .section-05 .image {
+    position:relative;
+}
+.homepage .section-05 .image img {
+    width:100%;
+    vertical-align:top;
+}
+.homepage .section-05 a:hover .image:after {
+    content:'\A';
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.homepage .section-05 .image:after {
+    content:'\A';
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.homepage .section-05 a:hover .image:after {
+    opacity:1;
+}
+.homepage .section-05 .image:hover:after {
+    opacity:1;
+}
+.homepage .section-05 a {
+    background-color: rgba(0,0,0,0.4);
+}
+.homepage .section-05 .span-medium-6 {
+    margin-bottom: 20px;
+}
+.homepage .section-05 a:hover:before {
+    content: "";
+    background: url("../img/icon-search.svg") no-repeat;
+    width: 57px;
+    height: 56px;
+    z-index: 1;
+    /*background-color: rgba(0,0,0,0.4);*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+.homepage .harmonica .main-panel label {
+    padding: 10px 50px 10px 10px;
+}
+.homepage .harmonica .main-panel label span.bowtie {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+}
+.getting-started .section-02 {
+    background-image: url(../img/obdlnk-1-kopie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    min-height: 260px;
+}
+.getting-started .section-02 .jumbotron {
+    padding-top: 55px;
+}
+.getting-started .section-02 span.first-text {
+    color: white;
+    font-size: 41px;
+    font-weight: 700;
+}
+.getting-started .section-02 p {
+    color: #b4eafe;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-top: 29px;
+}
+.getting-started-text {
+    font-family: 'ProximaNova-Light', Sans-Serif;
+    font-size: large;
+    margin-bottom: 15px;
+    font-weight: lighter;
+}
+.download-table, .cdn-table {
+    margin: 0px 10px 0px 10px;
+}
+.table-left, .table-right {
+    max-width: 50%;
+    float: left;
+}
+
+.table-head {
+    font-size: 24px;
+    font-family: 'ProximaNova-Regular', Sans-Serif;
+    color: #1f3a93;
+}
+.table-text {
+    font-family: 'ProximaNova-Light', Sans-Serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-right: 14px;
+    min-height: 135px;
+    font-weight: lighter;
+}
+#wrapper {
+    position: relative;
+}
+.side-bar {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 40px;
+    width: 300px;
+    position: static;
+    background: transparent;
+}
+.side-bar li a {
+    color: #1f3a93;
+    font-size: 20px;
+}
+.side-bar li:hover {
+    background-color: #ffffff;
+    color: #1F3A93;
+    border-left: solid 4px #00aeef;
+    font-weight: bold;
+}
+.side-bar li {
+    border: none;
+    border-left: solid 4px transparent;
+}
+.sidebar li.sub-side a {
+    color: #26b2f1;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 22px;
+    height: auto;
+}
+.side-bar li a, .side-bar li label {
+    height: 30px;
+}
+pre {
+    border: solid 3px #e0e0e0;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+
+    overflow: scroll;
+    width: 100%;
+    word-wrap: normal;
+}
+pre:hover {
+    /*border: solid 3px transparent;*/
+    /*box-shadow: 0 0 10px #00AEEF;*/
+    cursor: text;
+}
+.getting-started .section-item-main h2 {
+    color: #1f3a93;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.getting-started .section-item-main hr {
+    height: 2px;
+    background-color: #d1d1d1;
+    border: none;
+}
+.getting-started .section-item-main .section-item h3 {
+    color: #1f3a93;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    border-left: 5px solid #00aeef;
+    padding: 5px 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.getting-started .show-harmonica p {
+    color: #ffffff;
+}
+.fix-buttons .button {
+    padding: 10px 20px;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.fix-buttons .button-primary {
+    background-color: #00aeef;
+    border: 1px solid #00aeef;
+}
+.fix-buttons .button-primary:hover {
+    background-color: #0089bc;
+    border: 1px solid #0089bc;
+}
+.fix-buttons .button-secondary {
+    background-color: #505050;
+    border: 1px solid #505050;
+}
+.fix-buttons .button-secondary:hover {
+    background-color: #373737;
+    border: 1px solid #373737;
+}
+.fix-buttons .button-mini {
+    padding: 0 4px;
+    line-height: 18px;
+    font-size: 12px;
+}
+.fix-buttons .button-small {
+    padding: 1px 5px;
+}
+.fix-buttons .button-medium {
+    font-size: 13px;
+    padding: 4px 9px;
+    line-height: 1.39;
+}
+.fix-buttons .button-large {
+    line-height: 1.35;
+    padding: 7px 16px;
+}
+.pre {
+    position: relative;
+}
+.copy-text {
+    display: none;
+}
+.copy-box {
+    height: 0;
+}
+.copy-box a.button-copy {
+    font-family: "Proxima Nova",sans-serif;
+    background-color: #00aeef;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 3px solid #E0E0E0;
+}
+.icons .copy-box a.button-copy {
+    border: none;
+}
+.copy-box a.zeroclipboard-is-hover {
+   /*background-color: red;*/
+}
+.not-custom-style h1, .not-custom-style h2,
+.not-custom-style h3, .not-custom-style h4,
+.not-custom-style h5, .not-custom-style h6 {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+    border: none !important;
+    color: black !important;
+}
+.not-custom-style h1 {
+    font-size: 32px !important;
+}
+.not-custom-style h2 {
+    font-size: 30px !important;
+}
+.not-custom-style h3 {
+    font-size: 24px !important;
+}
+.not-custom-style h4 {
+    font-size: 18px !important;
+}
+.not-custom-style h5 {
+    font-size: 14px !important;
+}
+.not-custom-style h6 {
+    font-size: 12px !important;
+}
+
+.tiecons {
+    font-size: 32px;
+}
+
+.tiecons-box {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 135px;
+    min-height: 170px;
+    margin: 10px 5px 0;
+    padding: 10px;
+    border: solid 1px #00aeef;
+}
+
+.tiecons-box:hover, .tiecons-box-hover {
+    /*background-color: #00aeef;*/
+    background-color: #1F3A93;
+    border-color: #1F3A93;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.tiecons-name {
+    display: block;
+    margin-top: 10px;
+}
+
+.tiecons-box .copy-box a.button-copy {
+    bottom: -1px;
+    top: auto;
+    left: -1px;
+    right: auto;
+    width: 135px;
+}
+
+.homepage .harmonica input:checked + .main-panel label span::before {
+    content: "";
+}
+.homepage .harmonica input:checked + .main-panel label span.bowtie:before {
+    font-family: "bowtie";
+    content: "\e607";
+}
+a.social-popout span {
+    color: #1f3a93;
+}
+a.social-popout span:hover {
+    color: #00AEEF;
+}
+.section-06 span.bowtie.bowtie-logobowtie {
+    position: relative;
+}
+.section-06 span.bowtie span.absolute {
+    position: absolute !important;
+    color: #00aeef;
+    font-family: "Proxima Nova",sans-serif;
+    font-size: 15px !important;
+    font-weight: 600;
+    width: 118px;
+    bottom: 0;
+    left: 55px;
+}
+.section-07 {
+    margin-top: 50px;
+}
+.bna .bna-content .before {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/*RESPONZIVE*/
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .section-01 {
+        height: 60px;
+    }
+    .section-01 .menu .container {
+        overflow: visible;
+    }
+    .section-01 .menu .head a span.bowtie {
+        font-size: 45px !important;
+    }
+    .menu.only-main-menu .sub-main-menu label.show-main-menu {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        line-height: 1;
+        margin: 0;
+        padding: 13px 10px 13px 17px;
+        background-color: rgb(31, 58, 147);
+    }
+    .section-01 .menu ul.main-menu li a.active, .section-01 .menu ul.main-menu li a:hover {
+        border: none;
+    }
+    input#show-main-menu:checked + ul.main-menu {
+        position: absolute;
+        right: -20px;
+        top: 60px;
+        margin: 0;
+        min-width: 200px;
+        text-align: left;
+        background-color: rgb(31, 58, 147);
+    }
+    .section-01 .menu ul.main-menu li a {
+        color: #ffffff !important;
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 0;
+        height: auto;
+        line-height: 1;
+    }
+    .section-01 .menu ul.main-menu li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .section-02 .jumbotron span.bowtie.bowtie-logoiconbowtie {
+        font-size: 147px !important;
+        line-height: 1.3 !important;
+    }
+    .homepage .section-02 .jumbotron p:first-of-type {
+        font-size: 20px;
+    }
+    .homepage .section-02 .button-primary {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding: 6px 44px;
+    }
+    .homepage .section-02 .second-text {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .homepage .last-text {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    .homepage .section-02 p.vector-icons-head {
+        margin-bottom: 5px;
+    }
+    .homepage .section-02 p.vector-icons-text {
+        margin-bottom: 20px;
+    }
+    .homepage .section-02 {
+        margin-bottom: 20px;
+        background-position: 0 -300px !important;
+    }
+    .homepage .section-03 p {
+        padding: 40px 0 20px;
+        text-align: center;
+        font-size: 22px;
+    }
+    .homepage .section-03 {
+        height: 165px;
+    }
+    .homepage .section-03 .button-primary {
+        padding: 2px 33px;
+        margin: 0;
+    }
+    .section-03.background-primary .text-left {
+        text-align: center;
+    }
+    .homepage .section-04 .harmonica p.harmonica-head {
+        font-size: 22px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .homepage .section-04 .harmonica .show-harmonica {
+        padding: 15px;
+    }
+    .harmonica input:checked + .main-panel {
+        max-height: 1000px;
+    }
+    .homepage .section-04 {
+        padding-bottom: 50px;
+    }
+    .homepage .section-05 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .homepage .section-05 p {
+        margin-bottom: 20px;
+    }
+    .section-06 {
+        height: 250px;
+    }
+    .section-06 .text-left,
+    .section-06 .text-right {
+        text-align: center;
+    }
+    .section-07 {
+        height: 120px;
+    }
+    .section-07 .navbar ul {
+        text-align: center;
+    }
+    .section-07 .navbar li a {
+        padding: 10px;
+    }
+    a.social-popout {
+        margin: 0 5px 10px;
+    }
+    .section-01 {
+        /*border-bottom: solid 5px #1F3A93;*/
+    }
+    input#show-main-menu:checked ~ ul.main-menu {
+        box-shadow: -5px 5px 10px rgba(33, 33, 33, 0.7);
+    }
+    input#show-sidebar:checked ~ label span.bowtie-sipka:before {
+        content: "\e607";
+    }
+    .jumbotron {
+        text-align: center;
+    }
+    .jumbotron .text-right {
+        text-align: center;
+    }
+    .jumbotron img {
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    .getting-started .section-02 .jumbotron {
+        padding-top: 50px;
+    }
+    .getting-started .section-02 p {
+        font-size: 23px;
+    }
+    .getting-started .section-02 span.first-text {
+        font-size: 35px;
+    }
+    .getting-started footer .section-07 {
+        height: auto;
+    }
+    .tiecons-box {
+        width: 120px;
+    }
+    .tiecons-box .copy-box a.button-copy {
+        width: 120px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .homepage .section-03 {
+        height: 100px;
+    }
+    .homepage .section-06 {
+        height: 150px;
+    }
+    .section-07 {
+        height: 85px;
+    }
+    .homepage .section-03 .button-primary {
+        margin-top: 30px;
+    }
+    .section-01 .menu .head a span.bowtie {
+        font-size: 45px !important;
+    }
+    .section-01 .menu ul.main-menu li a {
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: auto;
+        line-height: 1;
+    }
+    .section-01 .menu ul.main-menu li {
+        padding-top: 27px;
+        padding-bottom: 22px;
+    }
+    .menu.only-main-menu .main-menu {
+        margin-right: 0;
+    }
+    .getting-started .section-02 p {
+        margin-top: 0;
+        font-size: 24px;
+    }
+    .getting-started .section-02 {
+        min-height: 290px;
+    }
+    .getting-started footer .section-06 {
+        height: 162px;
+    }
+    a.social-popout {
+        margin: 0px 5px 10px;
+    }
+}
+@media screen and (width:768px) {
+    .getting-started .section-02 p {
+        margin-top: 20px;
+    }
+    .section-01 .menu ul.main-menu li {
+        margin: 0;
+        padding: 0;
+    }
+    .section-01 .menu ul.main-menu li a {
+        padding: 20px 0px 20px 20px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+    #sidebar {
+        width: 100%;
+    }
+    #left {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 4;
+    }
+    #left .side-bar {
+        width: 100%;
+        margin-top: 0;
+    }
+    .side-bar label.show-side {
+        background-color: rgba(31, 58, 147, 0.8);
+        padding: 12px;
+        font-size: 20px;
+    }
+    .side-bar label.show-side span {
+        font-size: 20px;
+        vertical-align: middle;
+        margin-left: 15px;
+        margin-top: -3px;
+    }
+    .side-bar input#show-sidebar:checked ~ ul.sidebar {
+        background-color: #1F3A93;
+        text-align: center;
+        height: 250px;
+        overflow: scroll;
+        border-top: solid 1px #ffffff;
+    }
+    .side-bar li a {
+        color: #ffffff;
+    }
+    li.active-menu {
+        background-color: transparent !important;
+    }
+    li.active-menu a {
+        font-weight: bold;
+    }
+    .side-bar li:hover {
+        background-color: transparent;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .side-bar ul.sidebar {
+        display: block;
+        background: transparent;
+    }
+    .side-bar label.show-side {
+        display: none;
+    }
+}
+.tiecons-facebook-circle-negative:hover {
+    color: #3b5998;
+}
+.tiecons-twitter-circle-negative:hover {
+    color: #00aced;
+}
+.tiecons-linkedin-circle-negative:hover {
+    color: #007bb6;
+}
+.tiecons-google-plus-circle-negative:hover {
+    color: #dd4b39;
+}
+.section-07 .navbar li:nth-of-type(2n) {
+    border-left: solid 2px;
+    border-right: solid 2px;
+}
+@media screen and (max-width: 1199px) {
+    .homepage .section-02 {
+        background: url(../img/section-02-bg.jpg) no-repeat;
+    }
+}
+li.active-menu {
+    background-color: #ffffff;
+    color: #1F3A93;
+    border-left: solid 4px #00aeef;
+    font-weight: bold;
+}
+ul.sub-side-group {
+    display: none;
+}
+li.active-menu + ul.sub-side-group {
+    display: block;
+}
+
+.generatecss .form-select {
+    height: 65px;
+}
+.generatecss .main-form .form-select .select-style {
+    margin-left: 0;
+    width: 100%;
+}
+.generatecss .main-form.select-modules-checkboxes .form-checkbox {
+    padding-bottom: 30px;
+}
+.generatecss .main-form.select-modules-checkboxes label.checkbox {
+    min-width: 140px;
+}
+.generatecss .form-checkbox div {
+    display: inline;
+}
+.generatecss .check-all {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.generatecss .main-form.select-modules-checkboxes input:not(:checked) + label.checkbox {
+    color: #505050 !important;
+    font-weight: normal !important;
+}
+.generatecss form.main-form.primary-form input:not(:checked) + label.checkbox::before {
+    background-color: rgba(80, 80, 80, 0.78) !important;
+}
+.generatecss form.main-form .form-select .select-style select {
+    font-weight: normal;
+}
+.generatecss input.color {
+    border-color: transparent !important;
+}
+.generatecss .button-secondary {
+    border: 2px solid transparent;
+}
+.generatecss .button-secondary:hover {
+    border: 2px solid #1F3A93;
+    background-color: #1F3A93;
+    color: #FFF;
+}
+@media screen and (max-width: 1024px) {
+    #shell {
+        display: none;
+    }
+}
+@media screen and (max-width: 385px) {
+    .section-02 .jumbotron span.bowtie.bowtie-logoiconbowtie {
+        font-size: 123px !important;
+    }
+    .homepage .section-02 .jumbotron p span.first-text {
+        font-size: 38px;
+    }
+    .homepage .section-02 .jumbotron p span.header-text {
+        font-size: 17px;
+    }
+    .homepage .section-02 .second-text {
+        font-size: 16px;
+    }
+    .homepage .last-text {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .section-07 {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .table-left, .table-right {
+        max-width: 100%;
+        float: none;
+    }
+    .table-text {
+        min-height: 1px;
+    }
+    .download-table, .cdn-table {
+        margin: 0;
+    }
+    .download-table a.button {
+        margin-bottom: 20px;
+    }
+}
