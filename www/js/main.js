@@ -1,4 +1,4 @@
-ZeroClipboard.config( { swfPath: "../src/js/ZeroClipboard.swf" } );
+ZeroClipboard.config( { swfPath: "../js/ZeroClipboard.swf" } );
 
 
 var client = new ZeroClipboard( $(".button-copy") );
@@ -35,7 +35,7 @@ function stickyMenuHandler(e){
     if(window.innerWidth < 1024){
         // Mobile / tablet - 67 is height of main-menu bar
         scrollSpy.stop();
-        floatMenu.style.top = view >= 67 ? '0px' : (67-view) + 'px';
+        floatMenu.style.top = view >= 60 ? '0px' : (60-view) + 'px';
     } else {
         // PC
         scrollSpy.start();
