@@ -236,10 +236,12 @@ class GenerateCssPresenter extends BasePresenter
             }
 
 
-            $options = array('compress'=>true);
+            $options = array('compress' => true);
             $parser = new \Less_Parser($options);
             $parser->parse($tmp);
+
             $css = $parser->getCss();
+            $css = str_replace("bowtie/less/", "../", $css);
 
             $file = fopen($this->getCSSPath($surfix), "w");
             fwrite($file,
