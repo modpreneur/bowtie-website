@@ -32,4 +32,4 @@ bowtie:
     path: %wwwDir%/bowtie
 
 extensions:
-    bowtie: me\BowtieConnectorExtension
+    bowtie: ME\BowtieConnectorExtension
