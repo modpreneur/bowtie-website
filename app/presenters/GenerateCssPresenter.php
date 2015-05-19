@@ -217,7 +217,11 @@ class GenerateCssPresenter extends BasePresenter
                         }
                         break;
                     case ($i == 71):
-                        if($values->{$value}) $enableIcons = true;
+                        if($values->{$value}) {
+                            $enableIcons = true;
+                            $tmp = $tmp . $settings[$i-1];
+                        }
+
                         break;
                     case ($i >= 72):
                         if ($values->$value){
