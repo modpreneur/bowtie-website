@@ -23,18 +23,18 @@
                 <input type="checkbox" id="show-sidebar">
                 <label for="show-sidebar" class="show-side">Navigation<span class="bowtie bowtie-sipka"></span></label>
                 <ul class="sidebar">
-                    <li><a href="#tiecons-navigate">Tiecons</a></li>
-                    <li><a href="#rating-navigate">Rating</a></li>
-                    <li><a href="#bna-widget-navigate">Before and After Widget</a></li>
-                    <li><a href="#checkbox-navigate">Checkbox</a></li>
-                    <li><a href="#filters-navigate">Filters</a></li>
-                    <li><a href="#harmonica-navigate">Harmonica</a></li>
-                    <li><a href="#timeline-navigate">Timeline</a></li>
-                    <li><a href="#widget-box-navigate">Widget Box</a></li>
-                    <li><a href="#tags-navigate">Tags</a></li>
-                    <!--<li><a href="#-navigate">SIDE</a></li>-->
-                    <li><a href="#modal-navigate">Modal</a></li>
-                    <li><a href="#">Back to Top</a></li>
+                    <li><a href="#tiecons-navigate" class="navigation-link">Tiecons</a></li>
+                    <li><a href="#rating-navigate" class="navigation-link">Rating</a></li>
+                    <li><a href="#bna-widget-navigate" class="navigation-link">Before and After Widget</a></li>
+                    <li><a href="#checkbox-navigate" class="navigation-link">Checkbox</a></li>
+                    <li><a href="#filters-navigate" class="navigation-link">Filters</a></li>
+                    <li><a href="#harmonica-navigate" class="navigation-link">Harmonica</a></li>
+                    <li><a href="#timeline-navigate" class="navigation-link">Timeline</a></li>
+                    <li><a href="#widget-box-navigate" class="navigation-link">Widget Box</a></li>
+                    <li><a href="#tags-navigate" class="navigation-link">Tags</a></li>
+                    <!--<li><a href="#-navigate" class="navigation-link">SIDE</a></li>-->
+                    <li><a href="#modal-navigate" class="navigation-link">Modal</a></li>
+                    <li><a href="#" class="navigation-link">Back to Top</a></li>
                 </ul>
             </div>
         </div>
@@ -4028,7 +4028,7 @@
         <h2 id="rating-navigate">Rating</h2>
         <hr/>
         <p></p>
-        <div class="section-item">
+        <div class="section-item clearfix">
             <h3>Example</h3>
             <div class="rating">
                 <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
@@ -4937,6 +4937,11 @@
 </div>
 <script src="{$basePath}/js/scrollSpy.js"></script>
 <script src="{$basePath}/js/main.js"></script>
+<script>
+    $( ".navigation-link" ).click(function() {
+      $( "#show-sidebar" ).attr('checked', false);
+    });
+</script>
 </body>
 </html>
 

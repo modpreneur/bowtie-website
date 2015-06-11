@@ -19,7 +19,7 @@
 		"php": ">= 5.3.7",
 		"nette/nette": "~2.3.0",
 		"dg/adminer-custom": "~1.6",
-	  	"me/bowtie"  : "0.9.*",
+	  	"me/bowtie"  : "1.0.*",
 	  	"me/bowtie-nette-connector": "0.9.*"
 	},
 

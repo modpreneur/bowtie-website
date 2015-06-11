@@ -10,4 +10,7 @@ class DocumentationPresenter extends BasePresenter
     public function renderDefault()
     {
     }
+    public function renderForm()
+        {
+        }
 }
