@@ -162,6 +162,41 @@
 .bowtie-form {
   margin-bottom: 100px;
 
+  .wrapper-grid {
+    position: relative;
+    input#show-filters:not(:checked) ~ .grid form .grid_body table tbody .grid-row-filters {
+      display: none !important;
+    }
+    input#show-filters:checked ~ .grid form .grid_body table tbody .grid-row-filters {
+      display: table-row !important;
+    }
+    input#show-filters:checked + label.show-filters {
+      .tiecons {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+    .show-filters {
+      font-size: 20px;
+      position: absolute;
+      padding: 2px 20px 0;
+      top: 1px;
+      right: 3px;
+      cursor: pointer;
+      color: #FFFFFF;
+      &:hover {
+        background-color: @admin-primary-dark-color;
+      }
+      .tiecons {
+        padding-top: 8px;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+
   .side-bar {
     background: @admin-primary-color none repeat scroll 0% 0%;
     z-index: 10;
@@ -302,20 +337,22 @@
     color: #ffffff;
     background-color: @admin-primary-dark-color;
     border-radius: 1000px;
-    padding-right: 30px;
+    padding-right: 10px;
     height: 40px;
-
+    width: 180px;
     position: fixed;
     bottom: 9px;
     left: 10px;
+    text-align: left;
 
     label,a {
       .user-circle-login {
         font-size: 40px;
         padding-top: 0;
         margin-top: -1px;
-        margin-left: -2px;
+        margin-left: 0;
         vertical-align: middle;
+
 
         .tiecons-user-negative {
           position: absolute;
@@ -343,6 +380,13 @@
       }
       .surname {
         text-transform: uppercase;
+      }
+      .username {
+        font-weight: normal;
+        line-height: 38px;
+        display: inline-block;
+        text-transform: lowercase;
+        margin-left: 2px;
       }
     }
 
@@ -409,6 +453,13 @@
         padding: 0;
         li {
           line-height: 70px;
+          &:last-child {
+            a {
+              pointer-events: none;
+              cursor: default;
+              .nomark();
+            }
+          }
           a {
             position: relative;
             color: #5A6779;
@@ -467,7 +518,6 @@
         -webkit-transform: translateY(-50%) translateX(-50%);
         -ms-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
-
         z-index: 10;
       }
       span.hover-text {
@@ -476,16 +526,15 @@
         display: inline-block;
         background-color: rgb(95, 17, 124);
         color: rgb(255, 255, 255);
-        padding: 5px 5px 5px 27px;
+        padding: 3px 5px 5px 27px;
         height: 25px;
         border-radius: 18px;
-        z-index: 5;
-        line-height: 16px;
+        line-height: 20px;
         font-size: 15px;
-
+        z-index: -1;
         left: 0;
         width: 0;
-        visibility: hidden;
+        overflow: hidden;
         .animated();
         -webkit-transition-delay: 500ms;
         -moz-transition-delay: 500ms;
@@ -496,11 +545,7 @@
         .animated();
         width: 180px;
         left: 27px;
-        visibility: visible;
-        -webkit-transition-delay: 500ms;
-        -moz-transition-delay: 500ms;
-        -o-transition-delay: 500ms;
-        transition-delay: 500ms;
+        z-index: 5;
       }
     }
   }
@@ -534,17 +579,11 @@
           }
           .grid-row-filters {
             border-top: none !important;
-            &:hover {
-              background-color: #ffffff;
-            }
           }
           .grid-row-titles {
-            &:hover {
-              background-color: #ffffff;
-            }
             th {
               a {
-                color: #32363c;
+                color: @admin-primary-color;
                 font-size: 16px;
                 font-weight: 700;
               }
@@ -656,6 +695,7 @@
                 -moz-appearance:none;
                 appearance:none;
                 outline: none !important;
+                width: 100%;
                 &:focus {outline: none;}
                 option {
                   color: #32363c;
@@ -666,7 +706,7 @@
                 border-radius: 4px;
                 border: 1px solid #E8E9EA;
                 vertical-align: top;
-                max-width: 97px;
+                width: 100%;
                 margin-top: 5px;
               }
               a {
@@ -678,7 +718,7 @@
       }
       .grid_footer {
         .pager {
-          margin: 20px 0px;
+          margin: 20px 0;
         }
       }
     }

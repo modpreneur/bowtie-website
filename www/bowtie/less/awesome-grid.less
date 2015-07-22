@@ -121,7 +121,11 @@
   }
 
   .container {
-    max-width: @container-big;
+    width: @container-big;
+  }
+  .section {
+      margin: 0 auto;
+      min-width: @container-big;
   }
 
   .grid-generate-columns(@number-of-columns);
@@ -324,13 +328,14 @@
 .display-block {
   display: block !important;
 }
-
 .display-inline {
   display: inline !important;
 }
-
 .display-inline-block {
   display: inline-block !important;
+}
+.display-none {
+  display: none !important;
 }
 
 // position
@@ -339,4 +344,75 @@
 }
 .absolute {
   position: absolute !important;
+}
+
+@media (min-width: @brackpoint-mini) {
+  .display-none-mini {
+    display: none !important;
+  }
+  .display-inline-block-mini {
+    display: inline-block !important;
+  }
+  .display-inline-mini {
+    display: inline !important;
+  }
+  .display-block-mini {
+    display: block !important;
+  }
+}
+@media (min-width: @brackpoint-small) {
+  .display-none-small {
+    display: none !important;
+  }
+  .display-inline-block-small {
+    display: inline-block !important;
+  }
+  .display-inline-small {
+    display: inline !important;
+  }
+  .display-block-small {
+    display: block !important;
+  }
+}
+@media (min-width: @brackpoint-medium) {
+  .display-none-medium {
+    display: none !important;
+  }
+  .display-inline-block-medium {
+    display: inline-block !important;
+  }
+  .display-inline-medium {
+    display: inline !important;
+  }
+  .display-block-medium {
+    display: block !important;
+  }
+}
+@media (min-width: @brackpoint-large) {
+  .display-none-large {
+    display: none !important;
+  }
+  .display-inline-block-large {
+    display: inline-block !important;
+  }
+  .display-inline-large {
+    display: inline !important;
+  }
+  .display-block-large {
+    display: block !important;
+  }
+}
+@media (min-width: @brackpoint-xlarge) {
+  .display-none-xlarge {
+    display: none !important;
+  }
+  .display-inline-block-xlarge {
+    display: inline-block !important;
+  }
+  .display-inline-xlarge {
+    display: inline !important;
+  }
+  .display-block-xlarge {
+    display: block !important;
+  }
 }
