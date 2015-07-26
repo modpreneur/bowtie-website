@@ -31,5 +31,5 @@ bowtie:
 
     path: %wwwDir%/bowtie
 
-extensions:
-    bowtie: ME\BowtieConnectorExtension
+#extensions:
+#    bowtie: ME\BowtieConnectorExtension
