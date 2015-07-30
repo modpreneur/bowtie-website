@@ -4,11 +4,10 @@
 
     $configurator = new Nette\Configurator;
 
-//$configurator->setDebugMode('23.75.345.200'); // enable for your remote IP
+    $_ENV['NETTE_ENV'] == "production" ? $configurator->setDebugMode(false) : $configurator->setDebugMode(true);
+
     $configurator->enableDebugger(__DIR__ . '/../log');
-
     $configurator->setTempDirectory(__DIR__ . '/../temp');
-
     $configurator->createRobotLoader()
         ->addDirectory(__DIR__)
         ->addDirectory(__DIR__ . "/../vendor/less")
@@ -19,6 +18,5 @@
     $configurator->addConfig(__DIR__ . '/config/config.local.neon');
 
     $container = $configurator->createContainer();
-
 
     return $container;
