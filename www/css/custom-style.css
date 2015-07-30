@@ -2,6 +2,14 @@ body {
     background: #ffffff;
     font-family: "Proxima Nova", sans-serif;
 }
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .container {
     max-width: 1200px;
     width: 100%;
@@ -478,8 +486,8 @@ pre:hover {
     color: #1f3a93;
     font-size: 35px;
     font-weight: 700;
-    margin-top: 50px;
-    margin-bottom: 15px;
+    padding-top: 60px;
+    padding-bottom: 0;
 }
 .getting-started .section-item-main hr {
     height: 2px;
@@ -493,7 +501,7 @@ pre:hover {
     line-height: 20px;
     border-left: 5px solid #00aeef;
     padding: 5px 10px;
-    margin-top: 50px;
+    margin-top: 15px;
     margin-bottom: 20px;
 }
 .getting-started .show-harmonica p {
@@ -544,6 +552,10 @@ pre:hover {
 .copy-text {
     display: none;
 }
+.tiecons-box .copy-box a.button-copy:before,
+.tiecons-box .copy-box a.button-copy:after {
+    content: normal;
+}
 .copy-box {
     height: 0;
 }
@@ -555,12 +567,37 @@ pre:hover {
     top: 0;
     right: 0;
     border: 3px solid #E0E0E0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 .icons .copy-box a.button-copy {
     border: none;
 }
+.copy-box a.zeroclipboard-is-hover:before {
+    content: "Copy to clipboard.";
+    font-weight: normal;
+    position: absolute;
+    background-color: #000;
+    top: -48px;
+    left: -69px;
+    padding: 5px 15px;
+}
+.copy-box a.zeroclipboard-is-hover:after {
+    content: "";
+    position: absolute;
+    top: -26px;
+    right: 1px;
+    border-width: 0 25px 25px 0;
+    border-style: solid;
+    border-color: transparent #000;
+    display: block;
+    width: 0;
+}
 .copy-box a.zeroclipboard-is-hover {
-   /*background-color: red;*/
+   background-color: #1F3A93 !important;
 }
 .not-custom-style h1, .not-custom-style h2,
 .not-custom-style h3, .not-custom-style h4,
@@ -663,9 +700,12 @@ a.social-popout span:hover {
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+.section-items {
+    padding-top: 50px;
+}
 
 /*RESPONZIVE*/
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .section-01 {
         height: 60px;
     }
@@ -892,7 +932,7 @@ a.social-popout span:hover {
         padding: 20px 0px 20px 20px;
     }
 }
-@media screen and (min-width: 320px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
     #sidebar {
         width: 100%;
     }

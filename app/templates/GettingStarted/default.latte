@@ -23,11 +23,11 @@
                                     <input type="checkbox" id="show-sidebar">
                                     <label for="show-sidebar" class="show-side">Navigation<span class="bowtie bowtie-sipka"></span></label>
                                     <ul class="sidebar">
-                                        <li><a href="#download-navigate">Download</a></li>
-                                        <li><a href="#responsive-navigate">Responsive</a></li>
-                                        <li><a href="#noneresponsive-navigate">Noneresponsive</a></li>
+                                        <li><a href="#download-navigate" class="navigation-link">Download</a></li>
+                                        <li><a href="#responsive-navigate" class="navigation-link">Responsive</a></li>
+                                        <li><a href="#noneresponsive-navigate" class="navigation-link">Noneresponsive</a></li>
                                         <!--<li><a href="#-navigate">Side</a></li>-->
-                                        <li><a href="#">Back to Top</a></li>
+                                        <li><a href="#" class="navigation-link">Back to Top</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -41,14 +41,14 @@
                         <hr/>
                         <p></p>
 
-                        <div class="section-item">
-                            <h3 id="download-navigate">Download</h3>
+                        <div class="section-item section-items" id="download-navigate">
+                            <h3>Download</h3>
                             <p class="getting-started-text">Create your perfect world based on Bowtie. Download and build from stable version (currently v1.0.0) or follow our easy form to customize framework as much as you want. We are also introducing Bowtie CDN for your comfort of usage.</p>
                             <div class="download-table clearfix">
                                 <div class="table-left">
                                     <p class="table-head">Stable version</p>
                                     <p class="table-text">All you want for work in one package. Download ZIP file including Bowtie CSS files and also basic examples. Follow easy steps for installation and use the most intuitive CSS framework ever.</p>
-                                    <a class="button button-secondary" href="bowtie-1.0.0.zip">Download <span class="bowtie bowtie-download padding-left-10"></span></a>
+                                    <a class="button button-secondary" href="http://data.bowtiecss.com/releases/bowtie-1.0.0.zip">Download <span class="bowtie bowtie-download padding-left-10"></span></a>
                                 </div>
                                 <div class="table-right">
                                     <p class="table-head">Bowtie generator</p>
@@ -69,8 +69,8 @@
                             <p>Just DOWNLOAD and BUILD.</p>
                         </div>
 
-                        <div class="section-item">
-                            <h3 id="responsive-navigate">Responsive</h3>
+                        <div class="section-item section-items" id="responsive-navigate">
+                            <h3>Responsive</h3>
                             <p></p>
                         </div>
                         <div class="section-item">
@@ -129,8 +129,8 @@
                             </pre></div>
                         </div>
 
-                        <div class="section-item">
-                            <h3 id="noneresponsive-navigate">None responsive</h3>
+                        <div class="section-item section-items" id="noneresponsive-navigate">
+                            <h3>None responsive</h3>
                             <p></p>
                         </div>
                         <div class="section-item">
@@ -197,4 +197,9 @@
 <script src="{$basePath}/js/scrollSpy.js"></script>
 <script src="{$basePath}/js/main.js"></script>
 <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+<script>
+    $( ".navigation-link" ).click(function() {
+      $( "#show-sidebar" ).attr('checked', false);
+    });
+</script>
 {/block}

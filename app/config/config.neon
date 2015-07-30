@@ -24,14 +24,12 @@ services:
 	- App\Forms\SignFormFactory
 	router: App\RouterFactory::createRouter
 
-assetic:
-	source:
-		- %appDir%/../vendor/me/bowtie/src/less
-		- %appDir%/../vendor/me/bowtie/src/fonts
-		- %appDir%/../vendor/me/bowtie/index.html
+#bowtie:
+#    source:
+#        - %appDir%/../vendor/me/bowtie/src/less
+#        - %appDir%/../vendor/me/bowtie/src/fonts
+#
+#    path: %wwwDir%/bowtie
 
-	path: %wwwDir%/bowtie
-
-
-extensions:
-	assetic: me\Assetic
+#extensions:
+#    bowtie: ME\BowtieConnectorExtension

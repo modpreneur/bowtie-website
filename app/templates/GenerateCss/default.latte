@@ -28,16 +28,16 @@
                                     <input type="checkbox" id="show-sidebar">
                                     <label for="show-sidebar" class="show-side">Navigation<span class="bowtie bowtie-sipka"></span></label>
                                     <ul class="sidebar">
-                                        <li><a href="#download-top-navigate">Download</a></li>
-                                        <li><a href="#select-modules-navigate">Select modules</a></li>
-                                        <li><a href="#colors-navigate">Colors</a></li>
-                                        <li><a href="#grid-navigate">Grid System</a></li>
-                                        <li><a href="#border-navigate">Border radius</a></li>
-                                        <li><a href="#typography-navigate">Typography</a></li>
-                                        <!--<li><a href="#feature-navigate">typography</a></li>-->
-                                        <li><a href="#download-bottom-navigate">Download</a></li>
-                                        <!--<li><a href="#-navigate">Side</a></li>-->
-                                        <li><a href="#">Back to Top</a></li>
+                                        <!--<li><a href="#download-top-navigate" class="navigation-link">Download</a></li>-->
+                                        <li><a href="#select-modules-navigate" class="navigation-link">Select modules</a></li>
+                                        <li><a href="#colors-navigate" class="navigation-link">Colors</a></li>
+                                        <li><a href="#grid-navigate" class="navigation-link">Grid System</a></li>
+                                        <li><a href="#border-navigate" class="navigation-link">Border radius</a></li>
+                                        <li><a href="#typography-navigate" class="navigation-link">Typography</a></li>
+                                        <!--<li><a href="#feature-navigate" class="navigation-link">typography</a></li>-->
+                                        <li><a href="#download-bottom-navigate" class="navigation-link">Download</a></li>
+                                        <!--<li><a href="#-navigate" class="navigation-link">Side</a></li>-->
+                                        <li><a href="#" class="navigation-link">Back to Top</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -59,8 +59,8 @@
                             <form n:name = 'generateCssForm' name = 'main_form' class="main-form primary-form">
 
                                 <div class="section-item-main">
-                                    <div class="section-item">
-                                        <h3 id="select-modules-navigate">Select modules</h3>
+                                    <div class="section-item section-items" id="select-modules-navigate">
+                                        <h3>Select modules</h3>
                                         <p></p>
                                     </div>
                                     <div class='main-form primary-form select-modules-checkboxes'>
@@ -181,8 +181,8 @@
                                     </div>
                                 </div>
                                 <div class="section-item-main">
-                                    <div class="section-item">
-                                        <h3 id="colors-navigate">Colors</h3>
+                                    <div class="section-item section-items" id="colors-navigate">
+                                        <h3>Colors</h3>
                                         <p></p>
                                     </div>
                                     <div class="main-form primary-form">
@@ -257,8 +257,8 @@
                                     </div>
                                 </div>
                                 <div class="section-item-main">
-                                    <div class="section-item">
-                                        <h3 id="grid-navigate">Grid System</h3>
+                                    <div class="section-item section-items" id="grid-navigate">
+                                        <h3>Grid System</h3>
                                         <p></p>
                                     </div>
                                     <div class="main-form primary-form">
@@ -321,8 +321,8 @@
 
 
                                 <div class="section-item-main">
-                                    <div class="section-item">
-                                        <h3 id="border-navigate">Border radius</h3>
+                                    <div class="section-item section-items" id="border-navigate">
+                                        <h3>Border radius</h3>
                                         <p></p>
                                     </div>
                                     <div class="main-form primary-form">
@@ -344,8 +344,8 @@
                                 </div>
 
                                 <div class="section-item-main">
-                                    <div class="section-item">
-                                        <h3 id="typography-navigate">Typography</h3>
+                                    <div class="section-item section-items" id="typography-navigate">
+                                        <h3>Typography</h3>
                                         <p></p>
                                     </div>
                                     <div class="main-form primary-form">
@@ -416,7 +416,7 @@
                                     <!--</form>-->
                                 <!--</div>-->
 
-                                <div class="section-item-main">
+                                <div class="section-item-main section-items">
                                     <div class="section-item">
                                         <input n:name= 'send' value = 'Download' id="download-bottom-navigate" class="button button-secondary" style="width: 100%;padding: 15px 10px; margin-top: 40px">
 
@@ -431,4 +431,9 @@
         </div>
     </div>
 
+<script>
+    $( ".navigation-link" ).click(function() {
+      $( "#show-sidebar" ).attr('checked', false);
+    });
+</script>
 {/block}

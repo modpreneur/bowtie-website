@@ -34,7 +34,7 @@ function stickyMenuHandler(e){
     var view = document.body.scrollTop + document.documentElement.scrollTop;
     if(window.innerWidth < 1024){
         // Mobile / tablet - 67 is height of main-menu bar
-        scrollSpy.stop();
+        scrollSpy.start();
         floatMenu.style.top = view >= 60 ? '0px' : (60-view) + 'px';
     } else {
         // PC

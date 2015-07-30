@@ -217,7 +217,11 @@ class GenerateCssPresenter extends BasePresenter
                         }
                         break;
                     case ($i == 71):
-                        if($values->{$value}) $enableIcons = true;
+                        if($values->{$value}) {
+                            $enableIcons = true;
+                            $tmp = $tmp . $settings[$i-1];
+                        }
+
                         break;
                     case ($i >= 72):
                         if ($values->$value){
@@ -232,10 +236,12 @@ class GenerateCssPresenter extends BasePresenter
             }
 
 
-            $options = array('compress'=>true);
+            $options = array('compress' => true);
             $parser = new \Less_Parser($options);
             $parser->parse($tmp);
+
             $css = $parser->getCss();
+            $css = str_replace("bowtie/less/", "../", $css);
 
             $file = fopen($this->getCSSPath($surfix), "w");
             fwrite($file,
