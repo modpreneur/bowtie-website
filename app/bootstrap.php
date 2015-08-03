@@ -1,10 +1,13 @@
 <?php
 
+    use Tracy\Debugger;
+
     require __DIR__ . '/../vendor/autoload.php';
 
     $configurator = new Nette\Configurator;
 
-    $_ENV['NETTE_ENV'] == "production" ? $configurator->setDebugMode(false) : $configurator->setDebugMode(true);
+    // enable tracy
+    Debugger::enable($_ENV['NETTE_ENV']);
 
     $configurator->enableDebugger(__DIR__ . '/../log');
     $configurator->setTempDirectory(__DIR__ . '/../temp');
