@@ -6,7 +6,6 @@
 
     $configurator = new Nette\Configurator;
 
-    // enable tracy
     Debugger::enable(isset($_ENV['NETTE_ENV']) ? $_ENV['NETTE_ENV'] : "prod");
 
     $configurator->enableDebugger(__DIR__ . '/../log');
