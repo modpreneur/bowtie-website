@@ -34,7 +34,7 @@ RUN rm -rf /var/app/*
 ADD . /var/app
 
 # Fix permissions
-RUN rm mkdir -p temp/ \
+RUN mkdir -p temp/ \
     && mkdir -p log/ \
     && chmod 0777 -R temp/ \
     && chmod 0777 -R log/
