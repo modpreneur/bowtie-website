@@ -34,7 +34,9 @@ RUN rm -rf /var/app/*
 ADD . /var/app
 
 # Fix permissions
-RUN chmod 0777 -R temp/ \
+RUN rm mkdir -p temp/ \
+    && mkdir -p log/ \
+    && chmod 0777 -R temp/ \
     && chmod 0777 -R log/
 
 # enable apache and mod rewrite
