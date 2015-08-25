@@ -1,20 +1,15 @@
 {
-	"name": "nette/sandbox",
-	"description": "The sandbox is a pre-packaged Nette Framework project, basic configured structure for your application.",
-	"homepage": "http://nette.org",
+	"name": "bowtie/website",
+	"description": "Bowtie Website",
+	"homepage": "http://bowtiecss.com",
 	"type": "project",
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"authors": [
 		{
-			"name": "David Grudl",
-			"homepage": "http://davidgrudl.com"
-		},
-		{
-			"name": "Nette Community",
-			"homepage": "http://nette.org/contributors"
+			"name": "Modern Entrepreneur",
+			"homepage": "http://modpreneur.com"
 		}
 	],
-
 	"require": {
 		"php": ">= 5.3.7",
 		"nette/nette": "~2.3.0",
@@ -22,11 +17,9 @@
 	  	"me/bowtie"  : "1.0.*",
 	  	"me/bowtie-nette-connector": "0.9.*"
 	},
-
 	"require-dev": {
 		"nette/tester": "~1.4"
 	},
-
     "repositories": [
       {"type": "composer", "url": "https://tp.corp.modpreneur.com/repo/private/"},
       {"type": "composer", "url": "https://tp.corp.modpreneur.com/repo/packagist/"}
