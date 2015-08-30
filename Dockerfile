@@ -23,7 +23,7 @@ ADD docker/php.ini /usr/local/etc/php/
 ADD docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/app
-EXPOSE 80
+EXPOSE 80 443
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php \
