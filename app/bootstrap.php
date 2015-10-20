@@ -6,7 +6,7 @@
 
     $configurator = new Nette\Configurator;
 
-    Debugger::enable(isset($_ENV['NETTE_ENV']) ? $_ENV['NETTE_ENV'] : "prod");
+    Debugger::enable(getenv('NETTE_ENV') ? getenv('NETTE_ENV') : "prod");
 
     $configurator->enableDebugger(__DIR__ . '/../log');
     $configurator->setTempDirectory(__DIR__ . '/../temp');
