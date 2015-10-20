@@ -36,10 +36,10 @@ ADD . /var/app
 # Fix permissions
 RUN mkdir -p temp/ \
     && mkdir -p log/ \
-    && mkdir -p web/temp/ \
+    && mkdir -p www/temp/ \
     && chmod 0777 -R temp/ \
     && chmod 0777 -R log/ \
-    && chmod 0777 -R web/temp/
+    && chmod 0777 -R www/temp/
 
 # enable apache and mod rewrite
 RUN a2ensite 000-default.conf \
