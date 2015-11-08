@@ -9,7 +9,7 @@ RUN apt-get -y install \
     git \
     libcurl4-openssl-dev
 
-RUN docker-php-ext-install curl json mbstring opcache
+RUN docker-php-ext-install curl json mbstring opcache zip
 
 # prepare php and apache
 RUN rm -rf /etc/apache2/sites-available/* /etc/apache2/sites-enabled/*
