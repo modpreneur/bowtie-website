@@ -42,6 +42,8 @@ RUN mkdir -p temp/ \
     && chmod 0777 -R log/ \
     && chmod 0777 -R www/temp/
 
+RUN composer install --no-scripts --optimize-autoloader
+
 # enable apache and mod rewrite
 RUN a2ensite 000-default.conf \
     && a2enmod expires \
