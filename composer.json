@@ -25,11 +25,6 @@
 
 	"require-dev": {
 		"nette/tester": "~1.4"
-	},
-
-    "repositories": [
-      {"type": "composer", "url": "https://tp.corp.modpreneur.com/repo/private/"},
-      {"type": "composer", "url": "https://tp.corp.modpreneur.com/repo/packagist/"}
-    ]
-}
+	}
+}	
 
