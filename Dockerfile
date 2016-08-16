@@ -19,6 +19,7 @@ ADD docker/php.ini /usr/local/etc/php/
 ADD docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/app
+
 EXPOSE 80
 
 # Install composer
@@ -32,7 +33,7 @@ RUN chmod 0777 -R temp/ \
     && chmod 0777 -R log/ \
     && chmod 0777 -R www/temp/
 
-RUN composer install --no-scripts --optimize-autoloader
+RUN php composer.phar install --no-scripts --optimize-autoloader
 
 # enable apache and mod rewrite
 RUN a2ensite 000-default.conf \
