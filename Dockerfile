@@ -17,13 +17,13 @@ ADD docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/app
 
+# Install app
+ADD . /var/app
+
 EXPOSE 80
 
 # Install composer
 RUN sh composer_install.sh
-
-# Install app
-ADD . /var/app
 
 # Fix permissions
 RUN chmod 0777 -R temp/ \
