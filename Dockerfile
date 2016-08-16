@@ -7,7 +7,6 @@ RUN apt-get update
 RUN apt-get -y install \
     curl \
     git \
-    libcurl4-openssl-dev \
     zlib1g-dev
 
 RUN docker-php-ext-install curl json mbstring opcache zip
