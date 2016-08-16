@@ -1,11 +1,11 @@
-FROM php:5.6-apache
+FROM php:7-apache
 
 MAINTAINER Luke Vlcek <luke@modpreneur.com>
 
 # Install PHP5 and modules along with composer binary
 RUN apt-get clean \
     && apt-get update \
-    && apt-get -y install curl git zlib1g-dev
+    && apt-get -y install curl git libcurl4-openssl-dev zlib1g-dev
 
 RUN docker-php-ext-install curl json mbstring opcache zip
 
