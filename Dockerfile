@@ -41,4 +41,5 @@ RUN php composer.phar install --no-scripts --optimize-autoloader
 # enable apache and mod rewrite
 RUN a2ensite 000-default.conf \
     && a2enmod expires \
-    && a2enmod rewrite
+    && a2enmod rewrite \
+    && service apache2 restart

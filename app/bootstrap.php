@@ -13,7 +13,6 @@
     $configurator->createRobotLoader()
         ->addDirectory(__DIR__)
         ->addDirectory(__DIR__ . "/../vendor/less")
-        ->addDirectory(__DIR__ . "/../vendor/me")
         ->register();
 
     $configurator->addConfig(__DIR__ . '/config/config.neon');
