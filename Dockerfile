@@ -15,6 +15,11 @@ RUN rm -rf /etc/apache2/sites-available/* /etc/apache2/sites-enabled/*
 ADD docker/php.ini /usr/local/etc/php/
 ADD docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
+ENV APP_DOCUMENT_ROOT /var/app/www
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+
 WORKDIR /var/app
 
 # Install app
