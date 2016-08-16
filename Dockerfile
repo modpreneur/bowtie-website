@@ -18,7 +18,7 @@ ADD docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 WORKDIR /var/app
 
 # Install app
-ADD . /var/app
+ADD . /var/a
 
 EXPOSE 80
 
@@ -35,5 +35,4 @@ RUN php composer.phar install --no-scripts --optimize-autoloader
 # enable apache and mod rewrite
 RUN a2ensite 000-default.conf \
     && a2enmod expires \
-    && a2enmod rewrite \
-    && service apache2 restart
+    && a2enmod rewrite
