@@ -5,7 +5,7 @@ MAINTAINER Luke Vlcek <luke@modpreneur.com>
 # Install PHP5 and modules along with composer binary
 RUN apt-get clean \
     && apt-get update \
-    && apt-get -y install curl git libcurl4-openssl-dev zlib1g-dev
+    && apt-get -y install curl git libcurl4-openssl-dev wget zlib1g-dev
 
 RUN docker-php-ext-install curl json mbstring opcache zip
 
