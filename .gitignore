@@ -1,5 +1,15 @@
+# Web Project Files
 .idea
 /temp
 /log
 /vendor/*
 composer.phar
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Vagrant Files
+.vagrant/
+tls/

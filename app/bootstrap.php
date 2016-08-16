@@ -6,8 +6,7 @@
 
     $configurator = new Nette\Configurator;
 
-    // enable tracy
-    Debugger::enable($_ENV['NETTE_ENV']);
+    Debugger::enable((bool) getenv('NETTE_ENV'));
 
     $configurator->enableDebugger(__DIR__ . '/../log');
     $configurator->setTempDirectory(__DIR__ . '/../temp');
