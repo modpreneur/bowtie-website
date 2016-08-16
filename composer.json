@@ -1,23 +1,29 @@
 {
-	"name": "bowtie/website",
-	"description": "Bowtie Website",
-	"homepage": "http://bowtiecss.com",
+	"name": "modpreneur/bowtie-website",
+	"description": "Bowtie CSS is an elegant CSS framework.",
+	"homepage": "https://www.bowtiecss.com",
 	"type": "project",
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"authors": [
 		{
-			"name": "Modern Entrepreneur",
-			"homepage": "http://modpreneur.com"
+			"name": "Modern Entrepreneur s.r.o.",
+			"homepage": "http://modernipodnikatel.cz"
+		},
+		{
+			"name": "Jan Herrmann",
+			"homepage": "https://webvalley.cz"
 		}
 	],
+
 	"require": {
 		"php": ">= 5.3.7",
 		"nette/nette": "~2.3.0",
 		"dg/adminer-custom": "~1.6",
 	  	"me/bowtie"  : "1.0.*"
 	},
+
 	"require-dev": {
 		"nette/tester": "~1.4"
 	}
-}
+}	
 
